@@ -16,32 +16,32 @@
 
 `include "../core/defines.v"
 
-// tinyriscv soc顶层模块
+// tinyriscv soc\u9876\u5c42\u6a21\u5757
 module tinyriscv_soc_top(
 
     input wire clk,
     input wire rst,
 
-    output wire over,         // 测试是否完成信号
-    output wire succ,         // 测试是否成功信号
+    output wire over,         // \u6d4b\u8bd5\u662f\u5426\u5b8c\u6210\u4fe1\u53f7
+    output wire succ,         // \u6d4b\u8bd5\u662f\u5426\u6210\u529f\u4fe1\u53f7
 
-    output wire halted_ind,  // jtag是否已经halt住CPU信号
+    output wire halted_ind,  // jtag\u662f\u5426\u5df2\u7ecfhalt\u4f4fCPU\u4fe1\u53f7
 
-    input wire uart_debug_pin, // 串口下载使能引脚
+    input wire uart_debug_pin, // \u4e32\u53e3\u4e0b\u8f7d\u4f7f\u80fd\u5f15\u811a
 
-    output wire uart_tx_pin, // UART发送引脚
-    input wire uart_rx_pin,  // UART接收引脚
-    inout wire[1:0] gpio_io,    // GPIO引脚
+    output wire uart_tx_pin, // UART\u53d1\u9001\u5f15\u811a
+    input wire uart_rx_pin,  // UART\u63a5\u6536\u5f15\u811a
+    inout wire[15:0] gpio_io,    // GPIO\u5f15\u811a
 
-    input wire jtag_TCK,     // JTAG TCK引脚
-    input wire jtag_TMS,     // JTAG TMS引脚
-    input wire jtag_TDI,     // JTAG TDI引脚
-    output wire jtag_TDO,    // JTAG TDO引脚
+    input wire jtag_TCK,     // JTAG TCK\u5f15\u811a
+    input wire jtag_TMS,     // JTAG TMS\u5f15\u811a
+    input wire jtag_TDI,     // JTAG TDI\u5f15\u811a
+    output wire jtag_TDO,    // JTAG TDO\u5f15\u811a
 
-    input wire spi_miso,     // SPI MISO引脚
-    output wire spi_mosi,    // SPI MOSI引脚
-    output wire spi_ss,      // SPI SS引脚
-    output wire spi_clk      // SPI CLK引脚
+    input wire spi_miso,     // SPI MISO\u5f15\u811a
+    output wire spi_mosi,    // SPI MOSI\u5f15\u811a
+    output wire spi_ss,      // SPI SS\u5f15\u811a
+    output wire spi_clk      // SPI CLK\u5f15\u811a
 
     );
 
@@ -110,6 +110,19 @@ module tinyriscv_soc_top(
     wire[`MemBus] s5_data_i;
     wire s5_we_o;
 
+    // slave 6 pwm interface
+    wire[`MemAddrBus] s6_addr_o;
+    wire[`MemBus] s6_data_o;
+    wire[`MemBus] s6_data_i;
+    wire s6_we_o;
+
+    // slave 7 i2c interface
+    wire[`MemAddrBus] s7_addr_o;
+    wire[`MemBus] s7_data_o;
+    wire[`MemBus] s7_data_i;
+    wire s7_we_o;
+    
+
     // rib
     wire rib_hold_flag_o;
 
@@ -128,18 +141,23 @@ module tinyriscv_soc_top(
     wire timer0_int;
 
     // gpio
-    wire[1:0] io_in;
+    wire[15:0] io_in;
     wire[31:0] gpio_ctrl;
     wire[31:0] gpio_data;
 
+    // i2c
+    wire sda;
+    wire scl;
+
+
     assign int_flag = {7'h0, timer0_int};
 
-    // 低电平点亮LED
-    // 低电平表示已经halt住CPU
+    // \u4f4e\u7535\u5e73\u70b9\u4eaeLED
+    // \u4f4e\u7535\u5e73\u8868\u793a\u5df2\u7ecfhalt\u4f4fCPU
     assign halted_ind = ~jtag_halt_req_o;
 
 
-    // tinyriscv处理器核模块例化
+    // tinyriscv\u5904\u7406\u5668\u6838\u6a21\u5757\u4f8b\u5316
     tinyriscv u_tinyriscv(
         .clk(clk),
         .rst(rst),
@@ -167,7 +185,7 @@ module tinyriscv_soc_top(
         .succ(succ)
     );
 
-    // rom模块例化
+    // rom\u6a21\u5757\u4f8b\u5316
     rom u_rom(
         .clk(clk),
         .rst(rst),
@@ -177,7 +195,7 @@ module tinyriscv_soc_top(
         .data_o(s0_data_i)
     );
 
-    // ram模块例化
+    // ram\u6a21\u5757\u4f8b\u5316
     ram u_ram(
         .clk(clk),
         .rst(rst),
@@ -187,7 +205,7 @@ module tinyriscv_soc_top(
         .data_o(s1_data_i)
     );
 
-    // timer模块例化
+    // timer\u6a21\u5757\u4f8b\u5316
     timer timer_0(
         .clk(clk),
         .rst(rst),
@@ -198,7 +216,7 @@ module tinyriscv_soc_top(
         .int_sig_o(timer0_int)
     );
 
-    // uart模块例化
+    // uart\u6a21\u5757\u4f8b\u5316
     uart uart_0(
         .clk(clk),
         .rst(rst),
@@ -211,13 +229,55 @@ module tinyriscv_soc_top(
     );
 
     // io0
-    assign gpio_io[0] = (gpio_ctrl[1:0] == 2'b01)? gpio_data[0]: 1'bz;
+    assign gpio_io[0] = (gpio_ctrl[1:0] == 2'b01) ? gpio_data[0] : 1'bz;
     assign io_in[0] = gpio_io[0];
     // io1
-    assign gpio_io[1] = (gpio_ctrl[3:2] == 2'b01)? gpio_data[1]: 1'bz;
+    assign gpio_io[1] = (gpio_ctrl[3:2] == 2'b01) ? gpio_data[1] : 1'bz;
     assign io_in[1] = gpio_io[1];
+    // io2
+    assign gpio_io[2] = (gpio_ctrl[5:4] == 2'b01) ? gpio_data[2] : 1'bz;
+    assign io_in[2] = gpio_io[2];
+    // io3
+    assign gpio_io[3] = (gpio_ctrl[7:6] == 2'b01) ? gpio_data[3] : 1'bz;
+    assign io_in[3] = gpio_io[3];
+    // io4
+    assign gpio_io[4] = (gpio_ctrl[9:8] == 2'b01) ? gpio_data[4] : 1'bz;
+    assign io_in[4] = gpio_io[4];
+    // io5
+    assign gpio_io[5] = (gpio_ctrl[11:10] == 2'b01) ? gpio_data[5] : 1'bz;
+    assign io_in[5] = gpio_io[5];
+    // io6
+    assign gpio_io[6] = (gpio_ctrl[13:12] == 2'b01) ? gpio_data[6] : 1'bz;
+    assign io_in[6] = gpio_io[6];
+    // io7
+    assign gpio_io[7] = (gpio_ctrl[15:14] == 2'b01) ? gpio_data[7] : 1'bz;
+    assign io_in[7] = gpio_io[7];
+    // io8
+    assign gpio_io[8] = (gpio_ctrl[17:16] == 2'b01) ? gpio_data[8] : 1'bz;
+    assign io_in[8] = gpio_io[8];
+    // io9
+    assign gpio_io[9] = (gpio_ctrl[19:18] == 2'b01) ? gpio_data[9] : 1'bz;
+    assign io_in[9] = gpio_io[9];
+    // io10
+    assign gpio_io[10] = (gpio_ctrl[21:20] == 2'b01) ? gpio_data[10] : 1'bz;
+    assign io_in[10] = gpio_io[10];
+    // io11
+    assign gpio_io[11] = (gpio_ctrl[23:22] == 2'b01) ? gpio_data[11] : 1'bz;
+    assign io_in[11] = gpio_io[11];
+    // io12
+    assign gpio_io[12] = (gpio_ctrl[25:24] == 2'b01) ? gpio_data[12] : 1'bz;
+    assign io_in[12] = gpio_io[12];
+    // io13
+    assign gpio_io[13] = (gpio_ctrl[27:26] == 2'b01) ? gpio_data[13] : 1'bz;
+    assign io_in[13] = gpio_io[13];
+    // io14
+    assign gpio_io[14] = (gpio_ctrl[29:28] == 2'b01) ? gpio_data[14] : 1'bz;
+    assign io_in[14] = gpio_io[14];
+    // io15
+    assign gpio_io[15] = (gpio_ctrl[31:30] == 2'b01) ? gpio_data[15] : 1'bz;
+    assign io_in[15] = gpio_io[15];
 
-    // gpio模块例化
+    // gpio\u6a21\u5757\u4f8b\u5316
     gpio gpio_0(
         .clk(clk),
         .rst(rst),
@@ -230,7 +290,7 @@ module tinyriscv_soc_top(
         .reg_data(gpio_data)
     );
 
-    // spi模块例化
+    // spi\u6a21\u5757\u4f8b\u5316
     spi spi_0(
         .clk(clk),
         .rst(rst),
@@ -244,7 +304,29 @@ module tinyriscv_soc_top(
         .spi_clk(spi_clk)
     );
 
-    // rib模块例化
+    pwm pwm_0(
+        .clk(clk),
+        .rst(rst),
+        .we_i(s6_we_o),
+        .addr_i(s6_addr_o),
+        .data_i(s6_data_o),
+        .pwm_out(s6_data_i)
+    );
+
+    i2c i2c_0(
+        .clk(clk),
+        .rst(rst),
+        .we_i(s7_we_o),
+        .addr_i(s7_addr_o),
+        .data_i(s7_data_o),
+        .data_o(s7_data_i),
+        .sda(sda),
+        .scl(scl)
+    );
+
+
+
+    // rib\u6a21\u5757\u4f8b\u5316
     rib u_rib(
         .clk(clk),
         .rst(rst),
@@ -313,10 +395,23 @@ module tinyriscv_soc_top(
         .s5_data_i(s5_data_i),
         .s5_we_o(s5_we_o),
 
+        // slave 6  pwm interface
+        .s6_addr_o(s6_addr_o),
+        .s6_data_o(s6_data_o),
+        .s6_data_i(s6_data_i),
+        .s6_we_o(s6_we_o),
+
+        // slave 7  i2c interface
+        .s7_addr_o(s7_addr_o),
+        .s7_data_o(s7_data_o),
+        .s7_data_i(s7_data_i),
+        .s7_we_o(s7_we_o),
+
+
         .hold_flag_o(rib_hold_flag_o)
     );
 
-    // 串口下载模块例化
+    // \u4e32\u53e3\u4e0b\u8f7d\u6a21\u5757\u4f8b\u5316
     uart_debug u_uart_debug(
         .clk(clk),
         .rst(rst),
@@ -328,7 +423,7 @@ module tinyriscv_soc_top(
         .mem_rdata_i(m3_data_o)
     );
 
-    // jtag模块例化
+    // jtag\u6a21\u5757\u4f8b\u5316
     jtag_top #(
         .DMI_ADDR_BITS(6),
         .DMI_DATA_BITS(32),
