@@ -107,6 +107,8 @@ module tinyriscv(
     wire[`RegBus] ex_csr_wdata_o;
     wire ex_csr_we_o;
     wire[`MemAddrBus] ex_csr_waddr_o;
+    wire ex_sid_start_o;
+
 
     // regs模块输出信号
     wire[`RegBus] regs_rdata1_o;
@@ -140,6 +142,11 @@ module tinyriscv(
     wire clint_int_assert_o;
     wire clint_hold_flag_o;
 
+    // sid 模块输出信号
+    wire [`MemBus] sid_result_o;
+    wire [`MemAddrBus] sid_mem_waddr_o;
+    wire sid_busy_o;
+    wire sid_ready_o;
 
     assign rib_ex_addr_o = (ex_mem_we_o == `WriteEnable)? ex_mem_waddr_o: ex_mem_raddr_o;
     assign rib_ex_data_o = ex_mem_wdata_o;
@@ -329,6 +336,11 @@ module tinyriscv(
         .csr_wdata_o(ex_csr_wdata_o),
         .csr_we_o(ex_csr_we_o),
         .csr_waddr_o(ex_csr_waddr_o)
+        .sid_ready_i(sid_ready_o),
+        .sid_busy_i(sid_busy_o),
+        .sid_result_i(sid_result_o),
+        .sid_mem_waddr_i(sid_mem_waddr_o),
+        .sid_start_o(ex_sid_start_o)
     );
 
     // div模块例化
@@ -371,7 +383,17 @@ module tinyriscv(
         .int_assert_o(clint_int_assert_o)
     );
 
-    // add: new instruction
+    // add sid 模块例化
+
+    sid u_sid(
+        .clk(clk),
+        .rst(rst),
+        .start_i(ex_sid_start_o),
+        .ready_o(sid_ready_o),
+        .busy_o(sid_busy_o),
+        .result_o(sid_result_o),
+        .waddr_o(sid_waddr_o)
+    );
 
     
     

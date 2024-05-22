@@ -338,21 +338,21 @@ module tinyriscv_soc_top(
         .m0_req_i(m0_req_i),
         .m0_we_i(m0_we_i),
 
-        // master 1 interface
+        // master 1 interface 
         .m1_addr_i(m1_addr_i),
         .m1_data_i(`ZeroWord),
         .m1_data_o(m1_data_o),
         .m1_req_i(`RIB_REQ),
         .m1_we_i(`WriteDisable),
 
-        // master 2 interface
+        // master 2 interface:
         .m2_addr_i(m2_addr_i),
         .m2_data_i(m2_data_i),
         .m2_data_o(m2_data_o),
         .m2_req_i(m2_req_i),
         .m2_we_i(m2_we_i),
 
-        // master 3 interface
+        // master 3 interface: 
         .m3_addr_i(m3_addr_i),
         .m3_data_i(m3_data_i),
         .m3_data_o(m3_data_o),

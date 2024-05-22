@@ -93,9 +93,6 @@ module id(
                         op1_o = reg1_rdata_i;
                         op2_o = {{20{inst_i[31]}}, inst_i[31:20]};
                     end
-                    // add code here, sID, RT, IF instructions
-
-                    // add code here, sID, RT, IF instructions
                     default: begin
                         reg_we_o = `WriteDisable;
                         reg_waddr_o = `ZeroReg;
@@ -211,6 +208,39 @@ module id(
                         reg_waddr_o = `ZeroReg;
                     end
                 endcase
+            // add code below, sID, RT, IF instructions 
+            `INST_TYPE_N: begin
+                case(funct3)
+                `INST_SID:begin 
+                    reg1_raddr_o = `ZeroReg;
+                    reg2_raddr_o = `ZeroReg;
+                    reg_we_o = `WriteDisable;
+                    reg_waddr_o = `ZeroReg;
+                end
+                `INST_RT: begin 
+                    reg1_raddr_o = `ZeroReg;
+                    reg2_raddr_o = `ZeroReg;
+                    reg_we_o = `WriteEnable;
+                    reg_waddr_o = rd;
+                end
+                `INST_IF: begin
+                    reg1_raddr_o = rs1;
+                    reg2_raddr_o = 5'd31;
+                    reg_we_o = `WriteEnable;
+                    reg_waddr_o = rd;
+                end
+                default: begin
+                    reg1_raddr_o = `ZeroReg;
+                    reg2_raddr_o = `ZeroReg;
+                    reg_we_o = `WriteDisable;
+                    reg_waddr_o = `ZeroReg; 
+                end
+
+                endcase
+            end
+                    
+            // add code above, sID, RT, IF instructions
+
             end
             `INST_JAL: begin
                 reg_we_o = `WriteEnable;

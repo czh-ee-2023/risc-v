@@ -45,6 +45,16 @@
 `define INT_ASSERT 1'b1
 `define INT_DEASSERT 1'b0
 
+// sID
+`define sIDStart 1'b1
+`define sIDStop 1'b0
+`define sIDDepth 4'd10
+`define sIDResultReady 1'b1
+`define sIDResultNotReady 1'b0
+`define `byte_bus 7:0
+
+// rT
+
 `define INT_BUS 7:0
 `define INT_NONE 8'h0
 `define INT_RET 8'hff
@@ -59,21 +69,14 @@
 
 // I type inst
 `define INST_TYPE_I 7'b0010011
-`define INST_ADDI   4'b0000
-`define INST_SLTI   4'b0010
-`define INST_SLTIU  4'b0011
-`define INST_XORI   4'b0100
-`define INST_ORI    4'b0110
-`define INST_ANDI   4'b0111
-`define INST_SLLI   4'b0001
-`define INST_SRI    4'b0101
-
-// new I-type inst
-`define INST_SID    4'b1000
-`define INST_RT     4'b1001
-`define INST_IF     4'b1010
-// new I-type inst 
-
+`define INST_ADDI   3'b000
+`define INST_SLTI   3'b010
+`define INST_SLTIU  3'b011
+`define INST_XORI   3'b100
+`define INST_ORI    3'b110
+`define INST_ANDI   3'b111
+`define INST_SLLI   3'b001
+`define INST_SRI    3'b101
 
 // L type inst
 `define INST_TYPE_L 7'b0000011
@@ -143,6 +146,16 @@
 `define INST_CSRRSI 3'b110
 `define INST_CSRRCI 3'b111
 
+// new N-type inst
+`define INST_TYPE_N 7'b0101111
+`define INST_SID    3'b000
+`define INST_RT     3'b001
+`define INST_IF     3'b010
+
+
+
+
+
 // CSR reg addr
 `define CSR_CYCLE   12'hc00
 `define CSR_CYCLEH  12'hc80
@@ -169,3 +182,15 @@
 `define RegWidth 32
 `define RegNum 32        // reg num
 `define RegNumLog2 5
+
+// peripheral address
+`define ROM_ADDR    32'h0000_0000
+`define RAM_ADDR    32'h1000_0000
+`define TIMER_ADDR  32'h2000_0000
+`define UART_ADDR   32'h3000_0000
+`define GPIO_ADDR   32'h4000_0000
+`define SPI_ADDR    32'h5000_0000
+`define PWM_ADDR    32'h6000_0000
+`define I2C_ADDR    32'h7000_0000
+
+// 
