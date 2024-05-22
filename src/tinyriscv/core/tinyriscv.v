@@ -371,6 +371,9 @@ module tinyriscv(
         .int_assert_o(clint_int_assert_o)
     );
 
+    // add: new instruction
+
+    
     
 
 endmodule
