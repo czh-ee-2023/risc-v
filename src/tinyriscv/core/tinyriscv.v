@@ -335,7 +335,7 @@ module tinyriscv(
         .csr_rdata_i(ie_csr_rdata_o),
         .csr_wdata_o(ex_csr_wdata_o),
         .csr_we_o(ex_csr_we_o),
-        .csr_waddr_o(ex_csr_waddr_o)
+        .csr_waddr_o(ex_csr_waddr_o),
         .sid_ready_i(sid_ready_o),
         .sid_busy_i(sid_busy_o),
         .sid_result_i(sid_result_o),
@@ -369,6 +369,7 @@ module tinyriscv(
         .jump_addr_i(ex_jump_addr_o),
         .hold_flag_i(ctrl_hold_flag_o),
         .div_started_i(ex_div_start_o),
+        .sid_started_i(ex_sid_start_o),
         .data_i(csr_clint_data_o),
         .csr_mtvec(csr_clint_csr_mtvec),
         .csr_mepc(csr_clint_csr_mepc),
@@ -392,7 +393,7 @@ module tinyriscv(
         .ready_o(sid_ready_o),
         .busy_o(sid_busy_o),
         .result_o(sid_result_o),
-        .waddr_o(sid_waddr_o)
+        .mem_waddr_o(sid_waddr_o)
     );
 
     

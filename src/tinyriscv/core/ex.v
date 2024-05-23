@@ -51,7 +51,7 @@ module ex(
     // from sid
     input sid_ready_i,                      // sID模块运算结束标志
     input sid_busy_i,                       // sID模块运算忙标志
-    input sid_ready_i,                      // sID模块运算结束标志
+    input [`MemBus] sid_result_i,                     // sID模块运算结果
     input [`MemAddrBus] sid_mem_waddr_i,    // sID模块写内存地址
     
     // to mem
@@ -81,7 +81,7 @@ module ex(
     // to ctrl
     output wire hold_flag_o,                // 是否暂停标志
     output wire jump_flag_o,                // 是否跳转标志
-    output wire[`InstAddrBus] jump_addr_o   // 跳转目的地址
+    output wire[`InstAddrBus] jump_addr_o,   // 跳转目的地址
 
     // to sid
     output sid_start_o                       // sID开始工作标志      
@@ -264,24 +264,14 @@ module ex(
     always @(*)begin
         if(opcode == `INST_TYPE_N && funct3 == `INST_SID)begin
             sid_start = (sid_ready_i)&(~sid_busy_i);
-            sid_hold_flag = sid_busy;
+            sid_hold_flag = sid_busy_i;
         end
         else begin
             sid_start = `sIDStop;
             sid_hold_flag = `HoldDisable;
         end
     end
-
-    // 处理rT指令
-    always @(*)begin
-        if(opcode == `INST_TYPE_N && funct3 == `INST_RT)begin
-           
-        end
-    end
-
     
-
-
     // 执行正常指令
     always @ (*) begin
         reg_we = reg_we_i;
@@ -812,6 +802,7 @@ module ex(
                     end
                 endcase
             end
+            // 添加IF指令和rT指令
             `INST_TYPE_N: begin
                 case(funct3)
                 `INST_IF: begin
@@ -833,7 +824,7 @@ module ex(
                         mem_waddr_o = `ZeroWord;
                         mem_we = `WriteDisable;
 
-                        reg_wdata = reg1_rdata_i + {20{inst_i[31]},inst_i[31:20]}; // x[rd] = x[rs1] + sign_ext(imm[11:0]);
+                        reg_wdata = reg1_rdata_i + {{20{inst_i[31]}},inst_i[31:20]}; // x[rd] = x[rs1] + sign_ext(imm[11:0]);
                     end
                     
                 end

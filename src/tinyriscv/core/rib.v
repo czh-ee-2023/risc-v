@@ -160,6 +160,7 @@ module rib(
         s4_addr_o = `ZeroWord;
         s5_addr_o = `ZeroWord;
         s6_addr_o = `ZeroWord; // pwm
+        s7_addr_o = `ZeroWord; // i2c
         s0_data_o = `ZeroWord;
         s1_data_o = `ZeroWord;
         s2_data_o = `ZeroWord;
@@ -167,6 +168,7 @@ module rib(
         s4_data_o = `ZeroWord;
         s5_data_o = `ZeroWord;
         s6_data_o = `ZeroWord; // pwm
+        s7_data_o = `ZeroWord; // i2c
         s0_we_o = `WriteDisable;
         s1_we_o = `WriteDisable;
         s2_we_o = `WriteDisable;
@@ -174,6 +176,7 @@ module rib(
         s4_we_o = `WriteDisable;
         s5_we_o = `WriteDisable;
         s6_we_o = `WriteDisable; //pwm
+        s7_we_o = `WriteDisable; //i2c
 
 
         case (grant)

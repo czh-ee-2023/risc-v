@@ -18,58 +18,58 @@
 
 
 // core local interruptor module
-// ºËĞÄÖĞ¶Ï¹ÜÀí¡¢ÖÙ²ÃÄ£¿é
 module clint(
 
     input wire clk,
     input wire rst,
 
     // from core
-    input wire[`INT_BUS] int_flag_i,         // ÖĞ¶ÏÊäÈëĞÅºÅ
+    input wire[`INT_BUS] int_flag_i,         // ä¸­æ–­æ ‡å¿—ä¿¡å·
 
     // from id
-    input wire[`InstBus] inst_i,             // Ö¸ÁîÄÚÈİ
-    input wire[`InstAddrBus] inst_addr_i,    // Ö¸ÁîµØÖ·
+    input wire[`InstBus] inst_i,             // æŒ‡ä»¤å†…å®¹
+    input wire[`InstAddrBus] inst_addr_i,    // æŒ‡ä»¤åœ°å€
 
     // from ex
     input wire jump_flag_i,
     input wire[`InstAddrBus] jump_addr_i,
     input wire div_started_i,
+    input wire sid_started_i,
 
     // from ctrl
-    input wire[`Hold_Flag_Bus] hold_flag_i,  // Á÷Ë®ÏßÔİÍ£±êÖ¾
+    input wire[`Hold_Flag_Bus] hold_flag_i,  // æµæ°´çº¿æš‚åœæ ‡å¿—
 
     // from csr_reg
-    input wire[`RegBus] data_i,              // CSR¼Ä´æÆ÷ÊäÈëÊı¾İ
-    input wire[`RegBus] csr_mtvec,           // mtvec¼Ä´æÆ÷
-    input wire[`RegBus] csr_mepc,            // mepc¼Ä´æÆ÷
-    input wire[`RegBus] csr_mstatus,         // mstatus¼Ä´æÆ÷
+    input wire[`RegBus] data_i,              // CSRå¯„å­˜å™¨æ•°æ®è¾“å…¥
+    input wire[`RegBus] csr_mtvec,           // mtvecå¯„å­˜å™¨
+    input wire[`RegBus] csr_mepc,            // mepcå¯„å­˜å™¨
+    input wire[`RegBus] csr_mstatus,         // mstatuså¯„å­˜å™¨
 
-    input wire global_int_en_i,              // È«¾ÖÖĞ¶ÏÊ¹ÄÜ±êÖ¾
+    input wire global_int_en_i,              // å…¨å±€ä¸­æ–­ä½¿èƒ½æ ‡å¿—
 
     // to ctrl
-    output wire hold_flag_o,                 // Á÷Ë®ÏßÔİÍ£±êÖ¾
+    output wire hold_flag_o,                 // æµæ°´çº¿æš‚åœæ ‡å¿—
 
     // to csr_reg
-    output reg we_o,                         // Ğ´CSR¼Ä´æÆ÷±êÖ¾
-    output reg[`MemAddrBus] waddr_o,         // Ğ´CSR¼Ä´æÆ÷µØÖ·
-    output reg[`MemAddrBus] raddr_o,         // ¶ÁCSR¼Ä´æÆ÷µØÖ·
-    output reg[`RegBus] data_o,              // Ğ´CSR¼Ä´æÆ÷Êı¾İ
+    output reg we_o,                         // å†™CSRå¯„å­˜å™¨ æ ‡å¿—
+    output reg[`MemAddrBus] waddr_o,         // å†™CSRå¯„å­˜å™¨ åœ°å€
+    output reg[`MemAddrBus] raddr_o,         // è¯»CSRå¯„å­˜å™¨ åœ°å€
+    output reg[`RegBus] data_o,              // å†™CSRå¯„å­˜å™¨ æ•°æ®
 
     // to ex
-    output reg[`InstAddrBus] int_addr_o,     // ÖĞ¶ÏÈë¿ÚµØÖ·
-    output reg int_assert_o                  // ÖĞ¶Ï±êÖ¾
+    output reg[`InstAddrBus] int_addr_o,     // ä¸­æ–­å…¥å£åœ°å€
+    output reg int_assert_o                  // ä¸­æ–­æ ‡å¿—
 
     );
 
 
-    // ÖĞ¶Ï×´Ì¬¶¨Òå
+    // // ä¸­æ–­çŠ¶æ€å®šä¹‰
     localparam S_INT_IDLE            = 4'b0001;
     localparam S_INT_SYNC_ASSERT     = 4'b0010;
     localparam S_INT_ASYNC_ASSERT    = 4'b0100;
     localparam S_INT_MRET            = 4'b1000;
 
-    // Ğ´CSR¼Ä´æÆ÷×´Ì¬¶¨Òå
+    // å†™CSRå¯„å­˜å™¨çŠ¶æ€å®šä¹‰
     localparam S_CSR_IDLE            = 5'b00001;
     localparam S_CSR_MSTATUS         = 5'b00010;
     localparam S_CSR_MEPC            = 5'b00100;
@@ -85,16 +85,17 @@ module clint(
     assign hold_flag_o = ((int_state != S_INT_IDLE) | (csr_state != S_CSR_IDLE))? `HoldEnable: `HoldDisable;
 
 
-    // ÖĞ¶ÏÖÙ²ÃÂß¼­
+    // ä¸­æ–­çŠ¶æ€è½¬æ¢é€»è¾‘
     always @ (*) begin
         if (rst == `RstEnable) begin
             int_state = S_INT_IDLE;
         end else begin
             if (inst_i == `INST_ECALL || inst_i == `INST_EBREAK) begin
-                // Èç¹ûÖ´ĞĞ½×¶ÎµÄÖ¸ÁîÎª³ı·¨Ö¸Áî£¬ÔòÏÈ²»´¦ÀíÍ¬²½ÖĞ¶Ï£¬µÈ³ı·¨Ö¸ÁîÖ´ĞĞÍêÔÙ´¦Àí
-                if (div_started_i == `DivStop) begin
+                // å¦‚æœæ‰§è¡Œé˜¶æ®µçš„æŒ‡ä»¤ä¸ºå¼‚å¸¸æŒ‡ä»¤ï¼Œå…ˆåˆ¤æ–­æ˜¯å¦åŒæ­¥ä¸­æ–­ï¼Œå†æ‰§è¡ŒæŒ‡ä»¤
+                if (div_started_i == `DivStop || sid_started_i == `sIDStop) begin
                     int_state = S_INT_SYNC_ASSERT;
-                end else begin
+                end 
+                else begin
                     int_state = S_INT_IDLE;
                 end
             end else if (int_flag_i != `INT_NONE && global_int_en_i == `True) begin
@@ -107,7 +108,7 @@ module clint(
         end
     end
 
-    // Ğ´CSR¼Ä´æÆ÷×´Ì¬ÇĞ»»
+    // å†™CSRå¯„å­˜å™¨çŠ¶æ€è½¬æ¢
     always @ (posedge clk) begin
         if (rst == `RstEnable) begin
             csr_state <= S_CSR_IDLE;
@@ -116,10 +117,10 @@ module clint(
         end else begin
             case (csr_state)
                 S_CSR_IDLE: begin
-                    // Í¬²½ÖĞ¶Ï
+                    // åŒæ­¥ä¸­æ–­
                     if (int_state == S_INT_SYNC_ASSERT) begin
                         csr_state <= S_CSR_MEPC;
-                        // ÔÚÖĞ¶Ï´¦Àíº¯ÊıÀï»á½«ÖĞ¶Ï·µ»ØµØÖ·¼Ó4
+                        // ä¸­æ–­å‘ç”Ÿæ—¶è¦ä¿å­˜ä¸­æ–­è¿”å›åœ°å€ï¼Œè·³è½¬æŒ‡ä»¤éœ€è¦å‡4
                         if (jump_flag_i == `JumpEnable) begin
                             inst_addr <= jump_addr_i - 4'h4;
                         end else begin
@@ -136,20 +137,20 @@ module clint(
                                 cause <= 32'd10;
                             end
                         endcase
-                    // Òì²½ÖĞ¶Ï
+                    // å¼‚æ­¥ä¸­æ–­
                     end else if (int_state == S_INT_ASYNC_ASSERT) begin
-                        // ¶¨Ê±Æ÷ÖĞ¶Ï
+                        // å®šæ—¶å™¨ä¸­æ–­
                         cause <= 32'h80000004;
                         csr_state <= S_CSR_MEPC;
                         if (jump_flag_i == `JumpEnable) begin
                             inst_addr <= jump_addr_i;
-                        // Òì²½ÖĞ¶Ï¿ÉÒÔÖĞ¶Ï³ı·¨Ö¸ÁîµÄÖ´ĞĞ£¬ÖĞ¶Ï´¦ÀíÍêÔÙÖØĞÂÖ´ĞĞ³ı·¨Ö¸Áî
-                        end else if (div_started_i == `DivStart) begin
+                        // å¼‚æ­¥ä¸­æ–­å‘ç”Ÿåœ¨æŒ‡ä»¤æ‰§è¡Œä¸­ï¼Œä¸­æ–­è¿”å›åœ°å€ä¸ºå½“å‰æŒ‡ä»¤
+                        end else if (div_started_i == `DivStart || sid_started_i == `sIDStop) begin
                             inst_addr <= inst_addr_i - 4'h4;
                         end else begin
                             inst_addr <= inst_addr_i;
                         end
-                    // ÖĞ¶Ï·µ»Ø
+                    // ä¸­æ–­è¿”å›
                     end else if (int_state == S_INT_MRET) begin
                         csr_state <= S_CSR_MSTATUS_MRET;
                     end
@@ -173,7 +174,7 @@ module clint(
         end
     end
 
-    // ·¢³öÖĞ¶ÏĞÅºÅÇ°£¬ÏÈĞ´¼¸¸öCSR¼Ä´æÆ÷
+    // ä¸­æ–­ä¿¡å·è§¦å‘æ—¶å†™CSRå¯„å­˜å™¨
     always @ (posedge clk) begin
         if (rst == `RstEnable) begin
             we_o <= `WriteDisable;
@@ -181,25 +182,25 @@ module clint(
             data_o <= `ZeroWord;
         end else begin
             case (csr_state)
-                // ½«mepc¼Ä´æÆ÷µÄÖµÉèÎªµ±Ç°Ö¸ÁîµØÖ·
+                // å°†å½“å‰æŒ‡ä»¤åœ°å€å†™å…¥mepcå¯„å­˜å™¨
                 S_CSR_MEPC: begin
                     we_o <= `WriteEnable;
                     waddr_o <= {20'h0, `CSR_MEPC};
                     data_o <= inst_addr;
                 end
-                // Ğ´ÖĞ¶Ï²úÉúµÄÔ­Òò
+                // å†™ä¸­æ–­åŸå› 
                 S_CSR_MCAUSE: begin
                     we_o <= `WriteEnable;
                     waddr_o <= {20'h0, `CSR_MCAUSE};
                     data_o <= cause;
                 end
-                // ¹Ø±ÕÈ«¾ÖÖĞ¶Ï
+                // å…³é—­å…¨å±€ä¸­æ–­
                 S_CSR_MSTATUS: begin
                     we_o <= `WriteEnable;
                     waddr_o <= {20'h0, `CSR_MSTATUS};
                     data_o <= {csr_mstatus[31:4], 1'b0, csr_mstatus[2:0]};
                 end
-                // ÖĞ¶Ï·µ»Ø
+                // ä¸­æ–­è¿”å›
                 S_CSR_MSTATUS_MRET: begin
                     we_o <= `WriteEnable;
                     waddr_o <= {20'h0, `CSR_MSTATUS};
@@ -214,19 +215,19 @@ module clint(
         end
     end
 
-    // ·¢³öÖĞ¶ÏĞÅºÅ¸øexÄ£¿é
+    // å‘exæ¨¡å—å‘é€ä¸­æ–­ä¿¡å·
     always @ (posedge clk) begin
         if (rst == `RstEnable) begin
             int_assert_o <= `INT_DEASSERT;
             int_addr_o <= `ZeroWord;
         end else begin
             case (csr_state)
-                // ·¢³öÖĞ¶Ï½øÈëĞÅºÅ.Ğ´Íêmcause¼Ä´æÆ÷²ÅÄÜ·¢
+                // å‘é€ä¸­æ–­å¤„ç†ä¿¡å·ï¼Œå†™å…¥mcauseå¯„å­˜å™¨æ—¶è§¦å‘
                 S_CSR_MCAUSE: begin
                     int_assert_o <= `INT_ASSERT;
                     int_addr_o <= csr_mtvec;
                 end
-                // ·¢³öÖĞ¶Ï·µ»ØĞÅºÅ
+                // å‘é€ä¸­æ–­è¿”å›ä¿¡å·
                 S_CSR_MSTATUS_MRET: begin
                     int_assert_o <= `INT_ASSERT;
                     int_addr_o <= csr_mepc;

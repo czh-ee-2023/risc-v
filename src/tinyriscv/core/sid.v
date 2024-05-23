@@ -26,25 +26,25 @@ always@(posedge clk) begin
     if(rst == `RstEnable)begin
         cnt_cycle <= 4'b0000;        
         busy_o <= `False;
-        ready_o <= `sIDResultNotReady;
+        ready_o <= `sIDResultReady; //
     end
 
     else if (start_i == `sIDStart) begin
         busy_o <= `True;
         if(cnt_cycle < `sIDDepth-1)begin
             cnt_cycle <= cnt_cycle + 1;
-            result_o <= `sIDResultNotReady;
+            ready_o <= `sIDResultNotReady;
         end
         else begin 
             cnt_cycle <= 4'b0000;
-            result_o <= `sIDResultReady;
+            ready_o <= `sIDResultReady;
         end
     end
 
     else begin
         cnt_cycle <= 4'b0000;
         busy_o <= `False;
-        ready_o <= `sIDResultNotReady;
+        ready_o <= `sIDResultReady; //
     end
 end
 
@@ -53,17 +53,17 @@ end
 
 always@(*) begin    
     case(cnt_cycle)
-        4'd0: result_o <= {24'h0, 8'h32};
-        4'd1: result_o <= {24'h0, 8'h30};
-        4'd2: result_o <= {24'h0, 8'h32};
-        4'd3: result_o <= {24'h0, 8'h33};
-        4'd4: result_o <= {24'h0, 8'h33};
-        4'd5: result_o <= {24'h0, 8'h31};
-        4'd6: result_o <= {24'h0, 8'h30};
-        4'd7: result_o <= {24'h0, 8'h36};
-        4'd8: result_o <= {24'h0, 8'h35};
-        4'd9: result_o <= {24'h0, 8'h35};
-        default: result_o <= `ZeroWord;
+        4'd0: result_o = {24'h0, 8'h32};
+        4'd1: result_o = {24'h0, 8'h30};
+        4'd2: result_o = {24'h0, 8'h32};
+        4'd3: result_o = {24'h0, 8'h33};
+        4'd4: result_o = {24'h0, 8'h33};
+        4'd5: result_o = {24'h0, 8'h31};
+        4'd6: result_o = {24'h0, 8'h30};
+        4'd7: result_o = {24'h0, 8'h36};
+        4'd8: result_o = {24'h0, 8'h35};
+        4'd9: result_o = {24'h0, 8'h35};
+        default: result_o = `ZeroWord;
     endcase
 end
 

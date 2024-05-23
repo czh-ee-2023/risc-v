@@ -1,0 +1,181 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu May 23 20:15:52 2024
+# Process ID: 2784785
+# Current directory: /data/chenzh/course/digital_design/risc-v/sim
+# Command line: vivado
+# Log file: /data/chenzh/course/digital_design/risc-v/sim/vivado.log
+# Journal file: /data/chenzh/course/digital_design/risc-v/sim/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /data/chenzh/course/digital_design/risc-v/sim/project_1 -part xc7a35tfgg484-2
+add_files -norecurse {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/defines.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/clint.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/tinyriscv.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/if_id.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/sid.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/debug/jtag_top.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/debug/uart_debug.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/i2c.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/gpio.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/pwm.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/spi.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/id.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/uart.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/utils/gen_dff.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/rib.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/div.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/pc_reg.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/rom.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/debug/jtag_driver.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/timer.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/utils/full_handshake_rx.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/utils/gen_buf.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/debug/jtag_dm.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/utils/full_handshake_tx.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ctrl.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/ram.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/id_ex.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/regs.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/csr_reg.v /data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_top.v}
+file mkdir /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/constrs_1/new
+close [ open /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/constrs_1/new/tinyriscv_soc_top.xdc w ]
+add_files -fileset constrs_1 /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/constrs_1/new/tinyriscv_soc_top.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tinyriscv_soc_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+file mkdir /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/sim_1/new/tinyriscv_soc_tb.v w ]
+add_files -fileset sim_1 /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/sim_1/new/tinyriscv_soc_tb.v
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tinyriscv_soc_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/sim_1/new/tinyriscv_soc_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/sim_1/new/tinyriscv_soc_tb.v
+file delete -force /data/chenzh/course/digital_design/risc-v/sim/project_1/project_1.srcs/sim_1/new/tinyriscv_soc_tb.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_tb.v
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+launch_simulation
+source tinyriscv_soc_tb.tcl
+run 200 ns
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_pc_reg/pc_o}} 
+relaunch_sim
+run 200 ns
+relaunch_sim
+relaunch_sim
+run all
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+run 200 ns
+run 200 ns
+run 200 ns
+run 200 ns
+current_wave_config {}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/inst_i}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+run all
+current_wave_config {Untitled 5}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/inst_i}} 
+relaunch_sim
+current_wave_config {Untitled 5}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_id/inst_i}} 
+relaunch_sim
+current_wave_config {Untitled 5}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/start_i}} 
+relaunch_sim
+run all
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+current_wave_config {}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/inst_i}} 
+relaunch_sim
+run 200 ns
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+run all
+current_wave_config {Untitled 7}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/inst_i}} 
+relaunch_sim
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 7}
+log_wave {/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/start_i} 
+current_wave_config {Untitled 7}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/start_i}} 
+relaunch_sim
+run 200 ns
+run 200 ns
+run 200 ns
+run 200 ns
+run all
+current_wave_config {Untitled 7}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_pc_reg/pc_o}} 
+relaunch_sim
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+relaunch_sim
+run 200 ns
+run 200 ns
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+add_bp {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v} 267
+add_bp {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v} 266
+relaunch_sim
+run all
+run all
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+remove_bps -file {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v} -line 266
+add_bp {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v} 266
+current_wave_config {}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/sid_ready_i}} 
+current_wave_config {Untitled 10}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/sid_busy_i}} 
+current_wave_config {Untitled 10}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/opcode}} 
+current_wave_config {Untitled 10}
+add_wave {{/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/funct3}} 
+relaunch_sim
+run 20 ns
+remove_bps -file {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v} -line 266
+remove_bps -file {/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/ex.v} -line 267
+run 20 ns
+run 20 ns
+run 20 ns
+run 20 ns
+run 20 ns
+run 20 ns
+run 20 ns
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source tinyriscv_soc_tb.tcl
+relaunch_sim
+run 20 ns
+run 20 ns
+run 20 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim

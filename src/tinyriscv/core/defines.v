@@ -51,7 +51,7 @@
 `define sIDDepth 4'd10
 `define sIDResultReady 1'b1
 `define sIDResultNotReady 1'b0
-`define `byte_bus 7:0
+
 
 // rT
 
@@ -146,7 +146,7 @@
 `define INST_CSRRSI 3'b110
 `define INST_CSRRCI 3'b111
 
-// new N-type inst
+// new N type inst
 `define INST_TYPE_N 7'b0101111
 `define INST_SID    3'b000
 `define INST_RT     3'b001

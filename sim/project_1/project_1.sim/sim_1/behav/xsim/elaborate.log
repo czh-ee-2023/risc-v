@@ -1,0 +1,12 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /share/app/vivadoE/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto c93e5aa8fcbb4b94b2cfdd613e5ade82 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tinyriscv_soc_tb_behav xil_defaultlib.tinyriscv_soc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_waddr_o' [/data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/tinyriscv.v:396]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 2 for port 'io_pin_i' [/data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_top.v:288]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'data_o' [/data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_top.v:322]
+WARNING: [VRFC 10-5021] port 'uart_rx_pin' is not connected on this instance [/data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_tb.v:510]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

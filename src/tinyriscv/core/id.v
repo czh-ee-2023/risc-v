@@ -208,40 +208,41 @@ module id(
                         reg_waddr_o = `ZeroReg;
                     end
                 endcase
+            end
             // add code below, sID, RT, IF instructions 
             `INST_TYPE_N: begin
                 case(funct3)
-                `INST_SID:begin 
-                    reg1_raddr_o = `ZeroReg;
-                    reg2_raddr_o = `ZeroReg;
-                    reg_we_o = `WriteDisable;
-                    reg_waddr_o = `ZeroReg;
-                end
-                `INST_RT: begin 
-                    reg1_raddr_o = `ZeroReg;
-                    reg2_raddr_o = `ZeroReg;
-                    reg_we_o = `WriteEnable;
-                    reg_waddr_o = rd;
-                end
-                `INST_IF: begin
-                    reg1_raddr_o = rs1;
-                    reg2_raddr_o = 5'd31;
-                    reg_we_o = `WriteEnable;
-                    reg_waddr_o = rd;
-                end
-                default: begin
-                    reg1_raddr_o = `ZeroReg;
-                    reg2_raddr_o = `ZeroReg;
-                    reg_we_o = `WriteDisable;
-                    reg_waddr_o = `ZeroReg; 
-                end
+                    `INST_SID:begin 
+                        reg1_raddr_o = `ZeroReg;
+                        reg2_raddr_o = `ZeroReg;
+                        reg_we_o = `WriteDisable;
+                        reg_waddr_o = `ZeroReg;
+                    end
+                    `INST_RT: begin 
+                        reg1_raddr_o = `ZeroReg;
+                        reg2_raddr_o = `ZeroReg;
+                        reg_we_o = `WriteEnable;
+                        reg_waddr_o = rd;
+                    end
+                    `INST_IF: begin
+                        reg1_raddr_o = rs1;
+                        reg2_raddr_o = 5'd31;
+                        reg_we_o = `WriteEnable;
+                        reg_waddr_o = rd;
+                    end
+                    default: begin
+                        reg1_raddr_o = `ZeroReg;
+                        reg2_raddr_o = `ZeroReg;
+                        reg_we_o = `WriteDisable;
+                        reg_waddr_o = `ZeroReg; 
+                    end
 
                 endcase
             end
                     
             // add code above, sID, RT, IF instructions
 
-            end
+            
             `INST_JAL: begin
                 reg_we_o = `WriteEnable;
                 reg_waddr_o = rd;

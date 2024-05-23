@@ -1,0 +1,2 @@
+python assembly_to_machine.py --assembly assembly_in --out machine_out # 输入汇编代码，输出机器码 (assembly: 汇编码输入文件，out: 输出文件)
+python machine_to_assembly.py --machine machine_out --out assembly_out  # 输入机器码，输出汇编代码 (machine: 机器吗输入文件，out: 输出文件)
