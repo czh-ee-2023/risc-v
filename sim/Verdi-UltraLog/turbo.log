@@ -1,3 +1,2 @@
 Command Line: /tools/Synopsys/verdi/T-2022.06-SP2-1/platform/LINUXAMD64/bin/Novas -Ultra -f filelist.f -ssf *.fsdb -nologo -l verdi.log
 uname(Linux cad52 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 x86_64)
-au time 314.539846 4.369028 3.237442 delta 471523328 471523328 total 1022824448 1022824448

@@ -183,7 +183,7 @@ SYNOPSYS_ICC2=/tools/Synopsys/icc2/U-2022.12-SP1
 SSH_TTY=/dev/pts/10
 LC_ALL=C
 NCX_HOME=/tools/Synopsys/ncx/F-2011.12/ncx
-SNPS_VCS_INTERNAL_ROOT_PID=71465
+SNPS_VCS_INTERNAL_ROOT_PID=89411
 QT_GRAPHICSSYSTEM_CHECKED=1
 GROUP=nics4304
 USER=chenzh
@@ -202,7 +202,7 @@ MFLAGS=
 VCS_MODE_FLAG=64
 MAIL=/var/mail/chenzh
 PATH=.:/tools/Synopsys/sentaurus/Q_2019.12-SP1a/bin:/tools/Synopsys/ncx/F-2011.12/ncx/amd64/bin:/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64/bin:/tools/Synopsys/coretools/D-2010.03/bin:/tools/Synopsys/hsim/F-2011.09-SP2/hsimplus/bin:/tools/Synopsys/ns/V-2004.06-SP1/linux/ns/bin:/tools/Synopsys/verdi_supp/T-2022.06-SP2-1/bin:/tools/Synopsys/verdi/T-2022.06-SP2-1/bin:/tools/Synopsys/star-rcxt/J-2014.06-SP3/bin:/tools/Synopsys/icc2/U-2022.12-SP1/bin:/tools/Synopsys/icc/T-2022.03-SP2/bin:/tools/Synopsys/astro/Z-2007.03-SP3/bin/IA.32:/tools/Synopsys/testmax/T-2022.03-SP2/embedit/bin:/tools/Synopsys/testmax/T-2022.03-SP2/bin:/tools/Synopsys/spyglass/T-2022.06-SP2/SPYGLASS_HOME//bin:/tools/Synopsys/mvtools/vG-2012.09/bin:/tools/Synopsys/prime/T-2022.03-SP2/bin:/tools/Synopsys/prime/T-2022.03-SP2/amd64/syn/bin:/tools/Synopsys/fm/T-2022.03-SP2/amd64/fm/bin:/tools/Synopsys/sold/Z-2007.03:/tools/jEdit/5.5.0:/tools/Synopsys/mw/T-2022.03-SP2//bin/linux64:/usr/lib64/qt-3.3/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/dve/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/util:/tools/Synopsys/vcs/T-2022.06-SP2-1//tools/Synopsys/vcs/T-2022.06-SP2-1/bin/linux64/flexlm:/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/virsim/bin:/tools/Synopsys/syn/T-2022.03-SP2/amd64/syn/bin:/tools/Synopsys/lc/U-2022.12-SP1//linux64/lc/bin
-SNPS_VCS_INTERNAL_CURR_PID=71465
+SNPS_VCS_INTERNAL_CURR_PID=89411
 VERDI_HOME=/tools/Synopsys/verdi/T-2022.06-SP2-1
 PWD=/data/chenzh/course/digital_design/risc-v/sim
 VCS_HOME=/tools/Synopsys/vcs/T-2022.06-SP2-1
@@ -220,7 +220,7 @@ SYNOPSYS=/tools/Synopsys/syn/T-2022.03-SP2
 LM_LICENSE_FILE=27020@166.111.76.53:1701@lic_server2:1701@lic_server:
 DVE=/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/dve
 VCS_ARG_ADDED_FOR_TMP=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20240524114025_71465
+SNPS_VCS_TMPDIR=/tmp/vcs_20240524121424_89411
 HSPICE_HOME_DIR=/tools/Synopsys/hspice/B-2008.09
 SHLVL=2
 HOME=/home/chenzh
@@ -236,7 +236,7 @@ MilkyWay_HOME=/tools/Synopsys/mw/T-2022.03-SP2/
 SNPS_VCS_INTERNAL_MAKE=make
 SPYGLASS_HOME=/tools/Synopsys/spyglass/T-2022.06-SP2/SPYGLASS_HOME/
 QTLIB=/usr/lib64/qt-3.3/lib
-SNPS_VCS_INTERNAL_ROOT_START_TIME=1716550825.562922272
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1716552864.484049119
 SSH_CONNECTION=10.10.10.100 36938 10.10.10.102 22
 VIRSIMHOME=/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/virsim
 HSIM_HOME_DIR=/tools/Synopsys/hsim/F-2011.09-SP2
@@ -266,7 +266,7 @@ argv[4]=-a
 argv[5]=vcs.log
 266 profile - 100
           CPU/Mem usage: 0.030 sys,  0.170 user,  276.71M mem
-267 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+267 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 268 User CPU time used: 0 seconds
 269 System CPU time used: 0 seconds
 270 pliAppInit
@@ -293,29 +293,29 @@ argv[5]=vcs.log
 291 *Verdi* : Begin traversing the scopes, layer (0).
 292 *Verdi* : End of traversing.
 293 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.180 user,  377.33M mem
-                   incr: 0.000 sys,  0.010 user,  8.97M mem
-                   accu: 0.000 sys,  0.010 user,  8.97M mem
-              accu incr: 0.000 sys,  0.010 user,  8.97M mem
+          CPU/Mem usage: 0.040 sys,  0.190 user,  377.33M mem
+                   incr: 0.000 sys,  0.020 user,  8.97M mem
+                   accu: 0.000 sys,  0.020 user,  8.97M mem
+              accu incr: 0.000 sys,  0.020 user,  8.97M mem
 
           Count usage: 979 var,  601 idcode,  332 callback
                  incr: 979 var,  601 idcode,  332 callback
                  accu: 979 var,  601 idcode,  332 callback
             accu incr: 979 var,  601 idcode,  332 callback
-294 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+294 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 295 User CPU time used: 0 seconds
 296 System CPU time used: 0 seconds
 297 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.040 sys,  0.180 user,  378.38M mem
+          CPU/Mem usage: 0.040 sys,  0.190 user,  378.38M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  10.03M mem
+                   accu: 0.000 sys,  0.020 user,  10.03M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
           Count usage: 979 var,  601 idcode,  332 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 979 var,  601 idcode,  332 callback
             accu incr: 0 var,  0 idcode,  0 callback
-298 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+298 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 299 User CPU time used: 0 seconds
 300 System CPU time used: 0 seconds
 301 sps_call_fsdbDumpvars_vd_main at 0 : ../src/tinyriscv/soc/tinyriscv_soc_tb.v(504)
@@ -323,7 +323,7 @@ argv[5]=vcs.log
 303 argv[1]: (handle) tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs
 304 *Verdi* : Dumping the signal (tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs).
 305 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.180 user,  378.38M mem
+          CPU/Mem usage: 0.040 sys,  0.190 user,  378.38M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -332,11 +332,11 @@ argv[5]=vcs.log
                  incr: 0 var,  32 idcode,  1 callback
                  accu: 0 var,  32 idcode,  1 callback
             accu incr: 0 var,  32 idcode,  1 callback
-306 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+306 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 307 User CPU time used: 0 seconds
 308 System CPU time used: 0 seconds
 309 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.040 sys,  0.180 user,  378.38M mem
+          CPU/Mem usage: 0.040 sys,  0.190 user,  378.38M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -345,33 +345,33 @@ argv[5]=vcs.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  32 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-310 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+310 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 311 User CPU time used: 0 seconds
 312 System CPU time used: 0 seconds
 313 End of simulation at 100000000
 314 Memory usage: 378.556 M
-315 Maximum resident set size: 117 MB
+315 Maximum resident set size: 109 MB
 316 Hard page faults: 0
-317 Soft page faults: 29515
-318 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+317 Soft page faults: 28651
+318 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 319 User CPU time used: 0 seconds
 320 System CPU time used: 0 seconds
 321 Begin FSDB profile info:
 322 FSDB Writer : bc1(10315) bcn(16280) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.005653) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer elapsed time : flush(0.004420) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 323 End FSDB profile info
 324 FSDB closed. Name: *.fsdb Size: 39443
 325 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
 326                      - BlockUsed:1 Acquire:36231 BufferUsed:548107
 327                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:0
-328                      - MainProducerTime:0.250454272 TotalConsumerTime:0.000000000
-329                      - ElapsedTime:0.058941000
+328                      - MainProducerTime:0.246766666 TotalConsumerTime:0.000000000
+329                      - ElapsedTime:0.057978000
 330 Producer   0 profile - BlockUsed:1 Acquire:36231 BufferUsed:548107
 331 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
 332                      - BlockUsed:1 Acquire:36231 BufferUsed:548107
 333 SimExit
-334 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+334 Elapsed time:    0:00:00    Fri May 24 20:14:26 2024
 335 User CPU time used: 0 seconds
 336 System CPU time used: 0 seconds
 337 Sim process exit
