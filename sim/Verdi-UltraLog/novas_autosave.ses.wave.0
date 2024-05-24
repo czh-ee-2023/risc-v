@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 590892.641737
-cursor 290000.000000
+zoom 15000000.000000 25000000.000000
+cursor 1270000.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 3
+top 30
 ; marker line index
-markerPos 10
+markerPos 31
 
 ; event list
 ; addEvent event_name event_expression
@@ -49,6 +49,9 @@ addGroup "tb"
 activeDirFile "" "/data/chenzh/course/digital_design/risc-v/sim/*.fsdb"
 addSignal -h 15 /tinyriscv_soc_tb/clk
 addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_pc_reg/pc_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/x3[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x26[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x27[31:0]
 addGroup "sid"
 addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/cnt_cycle[3:0]
 addSignal -h 15 -holdScope start_i
@@ -63,10 +66,29 @@ addGroup "ex"
 addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/inst_i[31:0]
 addSignal -h 15 -holdScope sid_start_o
 addSignal -h 15 -holdScope hold_flag_o
-addSignal -h 15 -holdScope hold_flag
-addSignal -h 15 -holdScope div_hold_flag
-addSignal -h 15 -holdScope sid_hold_flag
-addGroup "G6"
+addSignal -h 15 -UNSIGNED -HEX -holdScope mem_waddr_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope mem_wdata_o[31:0]
+addSignal -h 15 -holdScope mem_we_o
+addSignal -h 15 -holdScope mem_req_o
+addGroup "uart"
+addSignal -h 15 /tinyriscv_soc_tb/tinyriscv_soc_top_0/uart_0/we_i
+addSignal -h 15 -UNSIGNED -HEX -holdScope addr_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope data_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope data_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope state[3:0]
+addSignal -h 15 -holdScope tx_pin
+addSignal -h 15 -UNSIGNED -HEX -holdScope tx_data[7:0]
+addGroup "rib"
+addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_rib/m0_addr_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope m0_data_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope m0_data_o[31:0]
+addSignal -h 15 -holdScope m0_req_i
+addSignal -h 15 -holdScope m0_we_i
+addSignal -h 15 -holdScope s3_we_o
+addSignal -h 15 -UNSIGNED -HEX -holdScope s3_data_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope s3_data_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope s3_addr_o[31:0]
+addGroup "G8"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm

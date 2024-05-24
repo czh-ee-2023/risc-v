@@ -153,12 +153,11 @@ ndpGetenv(LD_ASSUME_KERNEL):
 Runtime environment variables:
 REMOTEHOST=design
 SYNOPSYS_HOME=/tools/Synopsys
-INNOVUS_HOME=/tools/Cadence/INNOVUS191
 PRIMETIME_HOME=/tools/Synopsys/prime/T-2022.03-SP2
 SYNOPSYS_LC_ROOT=/tools/Synopsys/lc/U-2022.12-SP1/
 MANPATH=/tools/Synopsys/ns/V-2004.06-SP1/doc/ns/man::/tools/Synopsys/syn/T-2022.03-SP2/doc/syn/man:/tools/Synopsys/prime/T-2022.03-SP2/doc/pt/man
 SNPS_VCS_INTERNAL_MAKE_OPT=
-XDG_SESSION_ID=191641
+XDG_SESSION_ID=194608
 HOSTNAME=cad52
 SYNOPSYS_TMAX=/tools/Synopsys/testmax/T-2022.03-SP2
 UNAME=/bin/uname
@@ -169,85 +168,64 @@ VCS_DEPTH=0
 HOST=cad52
 TERM=xterm-256color
 SHELL=/bin/csh
-CTOS_HOME=/tools/Cadence/ctos141
 MAKEFLAGS=
 SYNOPSYS_SOLD=/tools/Synopsys/sold/Z-2007.03
-SSH_CLIENT=10.10.10.100 42164 22
-IUS_HOME=/tools/Cadence/INCISIVE152
+SSH_CLIENT=10.10.10.100 36938 22
 OS_LDFLAGS=
 LTRAN_ROOT=/tools/Synopsys/syn/T-2022.03-SP2/linux64/syn/ltran
 SELINUX_USE_CURRENT_RANGE=
-LBS_CLUSTER_MASTER=cad5
-TIX_LIBRARY=/tools/Cadence/EDI14/tools.lnx86/lib/tix8.1
 VCS_LOG_FILE=vcs.log
 MVTOOLS_HOME=/tools/Synopsys/mvtools/vG-2012.09
 QTDIR=/usr/lib64/qt-3.3
-EMX_HOME=/tools/Cadence/EMX20231
 QTINC=/usr/lib64/qt-3.3/include
 VERA_HOME=/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64
 SYNOPSYS_ICC2=/tools/Synopsys/icc2/U-2022.12-SP1
-SSH_TTY=/dev/pts/24
+SSH_TTY=/dev/pts/10
 LC_ALL=C
 NCX_HOME=/tools/Synopsys/ncx/F-2011.12/ncx
-SNPS_VCS_INTERNAL_ROOT_PID=14794
+SNPS_VCS_INTERNAL_ROOT_PID=71465
 QT_GRAPHICSSYSTEM_CHECKED=1
-USER=chenzh
-QUANTUS_HOME=/tools/Cadence/QUANTUS212
 GROUP=nics4304
-LD_LIBRARY_PATH=/tools/Synopsys/vcs/T-2022.06-SP2-1/lib:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib:/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64/lib:/tools/Synopsys/hsim/F-2011.09-SP2/platform/linux_opteron/bin:/tools/Synopsys/lc/U-2022.12-SP1//linux64/lc/shlib:/tools/Synopsys/syn/T-2022.03-SP2/linux/lib:/tools/Cadence/EDI14/tools/lib:/lib:/usr/lib:/usr/dt/lib:/usr/openwin/lib:/usr/local/lib:/tools/Cadence/IC618/tools/inca/lib:/tools/Cadence/IC618/tools/dfII/lib:/tools/Cadence/IC618/tools/lib:
+USER=chenzh
+LD_LIBRARY_PATH=/tools/Synopsys/vcs/T-2022.06-SP2-1/lib:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib:/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64/lib:/tools/Synopsys/hsim/F-2011.09-SP2/platform/linux_opteron/bin:/tools/Synopsys/lc/U-2022.12-SP1//linux64/lc/shlib:/tools/Synopsys/syn/T-2022.03-SP2/linux/lib:
 LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
-SPW_SYS_DB=/tools/Cadence/spw481
 SYNOPSYS_ICC=/tools/Synopsys/icc/T-2022.03-SP2
 SCRIPT_NAME=vcs
 VCS_MX_HOME_INTERNAL=1
 HOSTTYPE=x86_64-linux
 SNPS_VCS_CLANG_PATH=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/clang
-ULTRASIM_HOME=/tools/Cadence/ULTRASIM181
-ENCOUNTER=/tools/Cadence/EDI14
 MAKELEVEL=1
 Sentaurus_HOME=/tools/Synopsys/sentaurus/Q_2019.12-SP1a
 VCS_USER_OPTIONS=+v2k -timescale=1ns/1ps -full64 -R -debug_access+all -f filelist.f +mindelays -negdelay +neg_tchk -l vcs.log
 OVA_UUM=0
-IC_HOME=/tools/Cadence/IC618
 MFLAGS=
 VCS_MODE_FLAG=64
 MAIL=/var/mail/chenzh
-DRACHELP4=/tools/Cadence/IC618/tools/dracula/etc/drac_help
-PATH=.:/tools/Synopsys/sentaurus/Q_2019.12-SP1a/bin:/tools/Synopsys/ncx/F-2011.12/ncx/amd64/bin:/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64/bin:/tools/Synopsys/coretools/D-2010.03/bin:/tools/Synopsys/hsim/F-2011.09-SP2/hsimplus/bin:/tools/Synopsys/ns/V-2004.06-SP1/linux/ns/bin:/tools/Synopsys/verdi_supp/T-2022.06-SP2-1/bin:/tools/Synopsys/verdi/T-2022.06-SP2-1/bin:/tools/Synopsys/star-rcxt/J-2014.06-SP3/bin:/tools/Synopsys/icc2/U-2022.12-SP1/bin:/tools/Synopsys/icc/T-2022.03-SP2/bin:/tools/Synopsys/astro/Z-2007.03-SP3/bin/IA.32:/tools/Synopsys/testmax/T-2022.03-SP2/embedit/bin:/tools/Synopsys/testmax/T-2022.03-SP2/bin:/tools/Synopsys/spyglass/T-2022.06-SP2/SPYGLASS_HOME//bin:/tools/Synopsys/mvtools/vG-2012.09/bin:/tools/Synopsys/prime/T-2022.03-SP2/bin:/tools/Synopsys/prime/T-2022.03-SP2/amd64/syn/bin:/tools/Synopsys/fm/T-2022.03-SP2/amd64/fm/bin:/tools/Synopsys/sold/Z-2007.03:/tools/jEdit/5.5.0:/tools/Synopsys/mw/T-2022.03-SP2//bin/linux64:/tools/Cadence/EDI14/bin:/tools/Cadence/EDI14/tools/bin:/tools/Cadence/EDI14/tools/fe/bin:/tools/Cadence/EDI14/tools/tlfUtil/bin:/tools/Cadence/EDI14/tools/dsm/bin:/tools/Cadence/EDI14/BuildGates/version/bin:/tools/Cadence/EDI14/BuildGates/version/symutils/bin:/tools/Cadence/EXT161/tools/dfII/bin:/tools/Cadence/EXT161/tools/bin:/usr/lib64/qt-3.3/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/tools/Cadence/IC618/bin:/tools/Cadence/IC618/tools/bin:/tools/Cadence/IC618/tools/dfII/bin:/tools/Cadence/IC618/tools/dracula/bin:/tools/Cadence/SPECTRE211/bin:/tools/Cadence/SPECTRE211/tools/bin:/tools/Cadence/ccar/tools.lnx86/iccraft/bin:/tools/Cadence/ASSURA41/tools/assura/bin:/tools/Cadence/ctos141/tools/ctos/bin:/tools/Cadence/conformal71/conformal71/bin:/tools/Cadence/INCISIVE152/tools/bin:/tools/Cadence/INCISIVE152/tools/dfII/bin:/tools/Mentor/Calibre/aoj_cal_2023.1_18.8/bin:/tools/Cadence/INNOVUS191/bin:/tools/Cadence/INNOVUS191/tools/bin:/tools/Cadence/QUANTUS212/bin:/tools/Cadence/EMX20231/bin:/tools/Cadence/ULTRASIM181/tools.lnx86/ultrasim/bin:/tools/Cadence/spw481/tools/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/dve/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/util:/tools/Synopsys/vcs/T-2022.06-SP2-1//tools/Synopsys/vcs/T-2022.06-SP2-1/bin/linux64/flexlm:/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/virsim/bin:/tools/Synopsys/syn/T-2022.03-SP2/amd64/syn/bin:/tools/Synopsys/lc/U-2022.12-SP1//linux64/lc/bin
-SNPS_VCS_INTERNAL_CURR_PID=14794
+PATH=.:/tools/Synopsys/sentaurus/Q_2019.12-SP1a/bin:/tools/Synopsys/ncx/F-2011.12/ncx/amd64/bin:/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64/bin:/tools/Synopsys/coretools/D-2010.03/bin:/tools/Synopsys/hsim/F-2011.09-SP2/hsimplus/bin:/tools/Synopsys/ns/V-2004.06-SP1/linux/ns/bin:/tools/Synopsys/verdi_supp/T-2022.06-SP2-1/bin:/tools/Synopsys/verdi/T-2022.06-SP2-1/bin:/tools/Synopsys/star-rcxt/J-2014.06-SP3/bin:/tools/Synopsys/icc2/U-2022.12-SP1/bin:/tools/Synopsys/icc/T-2022.03-SP2/bin:/tools/Synopsys/astro/Z-2007.03-SP3/bin/IA.32:/tools/Synopsys/testmax/T-2022.03-SP2/embedit/bin:/tools/Synopsys/testmax/T-2022.03-SP2/bin:/tools/Synopsys/spyglass/T-2022.06-SP2/SPYGLASS_HOME//bin:/tools/Synopsys/mvtools/vG-2012.09/bin:/tools/Synopsys/prime/T-2022.03-SP2/bin:/tools/Synopsys/prime/T-2022.03-SP2/amd64/syn/bin:/tools/Synopsys/fm/T-2022.03-SP2/amd64/fm/bin:/tools/Synopsys/sold/Z-2007.03:/tools/jEdit/5.5.0:/tools/Synopsys/mw/T-2022.03-SP2//bin/linux64:/usr/lib64/qt-3.3/bin:/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/dve/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/bin:/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/util:/tools/Synopsys/vcs/T-2022.06-SP2-1//tools/Synopsys/vcs/T-2022.06-SP2-1/bin/linux64/flexlm:/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/virsim/bin:/tools/Synopsys/syn/T-2022.03-SP2/amd64/syn/bin:/tools/Synopsys/lc/U-2022.12-SP1//linux64/lc/bin
+SNPS_VCS_INTERNAL_CURR_PID=71465
 VERDI_HOME=/tools/Synopsys/verdi/T-2022.06-SP2-1
-EXT_HOME=/tools/Cadence/EXT161
 PWD=/data/chenzh/course/digital_design/risc-v/sim
 VCS_HOME=/tools/Synopsys/vcs/T-2022.06-SP2-1
 XMODIFIERS=@im=ibus
 SNPS_VCS_INTERNAL_MEMPRELOAD_USE_LIBC=1
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-TCLLIBPATH=/tools/Cadence/EDI14/BuildGates/version/lib/tools/tcl_packages
 LANG=en_US.UTF-8
-LDV_HOME=/tools/Cadence/INCISIVE152
-CDS_TEXT_EDITOR=gedit
 KDEDIRS=/usr
 LC_PATH=/tools/Synopsys/lc/U-2022.12-SP1/
 HERCULES_HOME_DIR=/tools/Synopsys/hercules/Y-2006.12-SP1
 VMR_MODE_FLAG=64
 SELINUX_LEVEL_REQUESTED=
-CDSHOME=/tools/Cadence/IC618
 VCS_CC=gcc
-CDS_Netlisting_Mode=Analog
 SYNOPSYS=/tools/Synopsys/syn/T-2022.03-SP2
-LM_LICENSE_FILE=27020@166.111.76.53:1701@lic_server2:1701@lic_server:1717@lic_server2:5280@lic_server2:1717@lic_server:5280@lic_server:
+LM_LICENSE_FILE=27020@166.111.76.53:1701@lic_server2:1701@lic_server:
 DVE=/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/dve
 VCS_ARG_ADDED_FOR_TMP=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20240524024750_14794
-CONFORMALHOME=/tools/Cadence/conformal71
-SOCE_INSTALL_PATH=/tools/Cadence/EDI14
-PLATO_HOME=/tools/Cadence/EDI14/tools/plato
+SNPS_VCS_TMPDIR=/tmp/vcs_20240524114025_71465
 HSPICE_HOME_DIR=/tools/Synopsys/hspice/B-2008.09
 SHLVL=2
 HOME=/home/chenzh
 OSTYPE=linux
 LD_ASSUME_KERNEL=
-MGC_HOME=/tools/Mentor/Calibre/aoj_cal_2023.1_18.8
 CORETOOLS_HOME=/tools/Synopsys/coretools/D-2010.03
 SIM_ARCH=linux
 VCS_COM=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/bin/vcs1
@@ -258,24 +236,21 @@ MilkyWay_HOME=/tools/Synopsys/mw/T-2022.03-SP2/
 SNPS_VCS_INTERNAL_MAKE=make
 SPYGLASS_HOME=/tools/Synopsys/spyglass/T-2022.06-SP2/SPYGLASS_HOME/
 QTLIB=/usr/lib64/qt-3.3/lib
-SNPS_VCS_INTERNAL_ROOT_START_TIME=1716518870.487363804
-SSH_CONNECTION=10.10.10.100 42164 10.10.10.102 22
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1716550825.562922272
+SSH_CONNECTION=10.10.10.100 36938 10.10.10.102 22
 VIRSIMHOME=/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/virsim
 HSIM_HOME_DIR=/tools/Synopsys/hsim/F-2011.09-SP2
 SYNOPSYS_ASTRO=/tools/Synopsys/astro/Z-2007.03-SP3
-SPW_HOME=/tools/Cadence/spw481
 SNPS_ARCH=linux
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 ARCH=linux
 sysc_uni_pwd=/data/chenzh/course/digital_design/risc-v/sim
-DISPLAY=localhost:34.0
+DISPLAY=localhost:20.0
 XDG_RUNTIME_DIR=/run/user/1033
 VCS_ARCH=linux64
-MMSIM_HOME=/tools/Cadence/SPECTRE211
 QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
 TOOL_HOME=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64
 ARCHPRO_ROOT=/tools/Synopsys/mvtools/vG-2012.09
-ASSURAHOME=/tools/Cadence/ASSURA41
 _=./simv
 OLDPWD=/data/chenzh/course/digital_design/risc-v/sim/simv.daidir/debug_dump/fsearch
 VCS_PATHMAP_PRELOAD_DONE=1
@@ -289,84 +264,114 @@ argv[2]=+mindelays
 argv[3]=+neg_tchk
 argv[4]=-a
 argv[5]=vcs.log
-291 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.170 user,  276.82M mem
-292 Elapsed time:    0:00:00    Fri May 24 10:47:52 2024
-293 User CPU time used: 0 seconds
-294 System CPU time used: 0 seconds
-295 pliAppInit
-296 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
-297 FSDB_GATE is set.
-298 FSDB_RTL is set.
-299 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
-300 Enable Parallel Dumping.
-301 pliAppMiscSet: New Sim Round
-302 pliEntryInit
-303 LIBSSCORE=found /tools/Synopsys/verdi/T-2022.06-SP2-1/share/PLI/lib/LINUXAMD64/libsscore_vcs202206.so through $NOVAS_HOME setting.
-304 FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-1, Linux x86_64/64bit, 01/12/2023
-305 (C) 1996 - 2023 by Synopsys, Inc.
-306 sps_call_fsdbDumpfile_main at 0 : ../src/tinyriscv/soc/tinyriscv_soc_tb.v(501)
-307 argv[0]: (*.fsdb)
-308 *Verdi* : Create FSDB file '*.fsdb'
-309 [spi_vcs_vd_ppi_create_root]: no upf option
-310 compile option from '/data/chenzh/course/digital_design/risc-v/sim/simv.daidir/vcs_rebuild'.
-311   "vcs '+v2k' '-timescale=1ns/1ps' '-full64' '-R' '-debug_access+all' '-f' 'filelist.f' '+mindelays' '-negdelay' '+neg_tchk' '-l' 'vcs.log' 2>&1"
-312 DVDI_is_vir_unload_enabled is enable
-313 FSDB_VCS_ENABLE_NATIVE_VC is enable
-314 sps_call_fsdbDumpvars_vd_main at 0 : ../src/tinyriscv/soc/tinyriscv_soc_tb.v(501)
-315 argv[0]: (0)
-316 *Verdi* : Begin traversing the scopes, layer (0).
-317 *Verdi* : End of traversing.
-318 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.190 user,  377.44M mem
+266 profile - 100
+          CPU/Mem usage: 0.030 sys,  0.170 user,  276.71M mem
+267 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+268 User CPU time used: 0 seconds
+269 System CPU time used: 0 seconds
+270 pliAppInit
+271 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+272 FSDB_GATE is set.
+273 FSDB_RTL is set.
+274 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+275 Enable Parallel Dumping.
+276 pliAppMiscSet: New Sim Round
+277 pliEntryInit
+278 LIBSSCORE=found /tools/Synopsys/verdi/T-2022.06-SP2-1/share/PLI/lib/LINUXAMD64/libsscore_vcs202206.so through $NOVAS_HOME setting.
+279 FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-1, Linux x86_64/64bit, 01/12/2023
+280 (C) 1996 - 2023 by Synopsys, Inc.
+281 sps_call_fsdbDumpfile_main at 0 : ../src/tinyriscv/soc/tinyriscv_soc_tb.v(502)
+282 argv[0]: (*.fsdb)
+283 *Verdi* : Create FSDB file '*.fsdb'
+284 [spi_vcs_vd_ppi_create_root]: no upf option
+285 compile option from '/data/chenzh/course/digital_design/risc-v/sim/simv.daidir/vcs_rebuild'.
+286   "vcs '+v2k' '-timescale=1ns/1ps' '-full64' '-R' '-debug_access+all' '-f' 'filelist.f' '+mindelays' '-negdelay' '+neg_tchk' '-l' 'vcs.log' 2>&1"
+287 DVDI_is_vir_unload_enabled is enable
+288 FSDB_VCS_ENABLE_NATIVE_VC is enable
+289 sps_call_fsdbDumpvars_vd_main at 0 : ../src/tinyriscv/soc/tinyriscv_soc_tb.v(503)
+290 argv[0]: (0)
+291 *Verdi* : Begin traversing the scopes, layer (0).
+292 *Verdi* : End of traversing.
+293 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.040 sys,  0.180 user,  377.33M mem
                    incr: 0.000 sys,  0.010 user,  8.97M mem
                    accu: 0.000 sys,  0.010 user,  8.97M mem
               accu incr: 0.000 sys,  0.010 user,  8.97M mem
 
-          Count usage: 977 var,  601 idcode,  334 callback
-                 incr: 977 var,  601 idcode,  334 callback
-                 accu: 977 var,  601 idcode,  334 callback
-            accu incr: 977 var,  601 idcode,  334 callback
-319 Elapsed time:    0:00:00    Fri May 24 10:47:52 2024
-320 User CPU time used: 0 seconds
-321 System CPU time used: 0 seconds
-322 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.040 sys,  0.190 user,  378.49M mem
+          Count usage: 979 var,  601 idcode,  332 callback
+                 incr: 979 var,  601 idcode,  332 callback
+                 accu: 979 var,  601 idcode,  332 callback
+            accu incr: 979 var,  601 idcode,  332 callback
+294 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+295 User CPU time used: 0 seconds
+296 System CPU time used: 0 seconds
+297 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.040 sys,  0.180 user,  378.38M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  10.02M mem
+                   accu: 0.000 sys,  0.010 user,  10.03M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 977 var,  601 idcode,  334 callback
+          Count usage: 979 var,  601 idcode,  332 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 977 var,  601 idcode,  334 callback
+                 accu: 979 var,  601 idcode,  332 callback
             accu incr: 0 var,  0 idcode,  0 callback
-323 Elapsed time:    0:00:00    Fri May 24 10:47:52 2024
-324 User CPU time used: 0 seconds
-325 System CPU time used: 0 seconds
-326 End of simulation at 5000000
-327 Memory usage: 378.499 M
-328 Maximum resident set size: 153 MB
-329 Hard page faults: 0
-330 Soft page faults: 29183
-331 Elapsed time:    0:00:00    Fri May 24 10:47:52 2024
-332 User CPU time used: 0 seconds
-333 System CPU time used: 0 seconds
-334 Begin FSDB profile info:
-335 FSDB Writer : bc1(808) bcn(2241) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.003231) io wait(0.000000) theadpool wait(0.000000)
+298 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+299 User CPU time used: 0 seconds
+300 System CPU time used: 0 seconds
+301 sps_call_fsdbDumpvars_vd_main at 0 : ../src/tinyriscv/soc/tinyriscv_soc_tb.v(504)
+302 argv[0]: (0)
+303 argv[1]: (handle) tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs
+304 *Verdi* : Dumping the signal (tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs).
+305 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.040 sys,  0.180 user,  378.38M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 979 var,  633 idcode,  333 callback
+                 incr: 0 var,  32 idcode,  1 callback
+                 accu: 0 var,  32 idcode,  1 callback
+            accu incr: 0 var,  32 idcode,  1 callback
+306 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+307 User CPU time used: 0 seconds
+308 System CPU time used: 0 seconds
+309 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.040 sys,  0.180 user,  378.38M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 979 var,  633 idcode,  333 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 0 var,  32 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+310 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+311 User CPU time used: 0 seconds
+312 System CPU time used: 0 seconds
+313 End of simulation at 100000000
+314 Memory usage: 378.556 M
+315 Maximum resident set size: 117 MB
+316 Hard page faults: 0
+317 Soft page faults: 29515
+318 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+319 User CPU time used: 0 seconds
+320 System CPU time used: 0 seconds
+321 Begin FSDB profile info:
+322 FSDB Writer : bc1(10315) bcn(16280) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.005653) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-336 End FSDB profile info
-337 FSDB closed. Name: *.fsdb Size: 35794
-338 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-339                      - BlockUsed:1 Acquire:3215 BufferUsed:48413
-340                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:0
-341                      - MainProducerTime:0.246209498 TotalConsumerTime:0.000000000
-342                      - ElapsedTime:0.052756000
-343 Producer   0 profile - BlockUsed:1 Acquire:3215 BufferUsed:48413
-344 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
-345                      - BlockUsed:1 Acquire:3215 BufferUsed:48413
-346 SimExit
-347 Elapsed time:    0:00:00    Fri May 24 10:47:52 2024
-348 User CPU time used: 0 seconds
-349 System CPU time used: 0 seconds
-350 Sim process exit
+323 End FSDB profile info
+324 FSDB closed. Name: *.fsdb Size: 39443
+325 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+326                      - BlockUsed:1 Acquire:36231 BufferUsed:548107
+327                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:0
+328                      - MainProducerTime:0.250454272 TotalConsumerTime:0.000000000
+329                      - ElapsedTime:0.058941000
+330 Producer   0 profile - BlockUsed:1 Acquire:36231 BufferUsed:548107
+331 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
+332                      - BlockUsed:1 Acquire:36231 BufferUsed:548107
+333 SimExit
+334 Elapsed time:    0:00:00    Fri May 24 19:40:27 2024
+335 User CPU time used: 0 seconds
+336 System CPU time used: 0 seconds
+337 Sim process exit

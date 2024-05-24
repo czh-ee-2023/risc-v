@@ -179,3 +179,5 @@ run 20 ns
 relaunch_sim
 relaunch_sim
 relaunch_sim
+reset_run synth_1
+close_sim

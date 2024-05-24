@@ -26,42 +26,39 @@ reg [3:0] cnt_cycle;
 always@(posedge clk) begin
     if(rst == `RstEnable)begin
         cnt_cycle <= 4'b0000;        
-        busy_o <= `False;
         ready_o <= `sIDResultReady; //
     end
     // detect start signal from ex
     else if(ready_o==`sIDResultReady)begin
         if(start_i == `sIDStart)begin
-            busy_o <= `True;
             cnt_cycle <= 4'b0001;
             ready_o <= `sIDResultNotReady;
         end
         else begin
             cnt_cycle <= 4'b0000;
-            busy_o <= `False;
             ready_o <= `sIDResultReady; //
         end
     end
     else begin
         if(cnt_cycle < `sIDDepth-1)begin
             ready_o <= `sIDResultNotReady;
-            busy_o <= `True;
             cnt_cycle <= cnt_cycle + 1; 
         end
         else if (cnt_cycle == `sIDDepth-1)begin
             ready_o <= `sIDResultReady;
-            busy_o <= `True;
             cnt_cycle <= cnt_cycle + 1;
         end
         else begin 
             cnt_cycle <= 4'b0000;
-            busy_o <= `False;
             ready_o <= `sIDResultReady;
         end
         end
     end
-    
-// ASCII码转16进制
+always@(*)begin
+    busy_o = (cnt_cycle > 4'd0);
+end
+
+// ASCII -> hex
 // 2023310655 -> {8'h32, 8'h30, 8'h32, 8'h33, 8'h33, 8'h31, 8'h30, 8'h36, 8'h35, 8'h35}
 
 always@(*) begin    

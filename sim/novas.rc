@@ -113,6 +113,7 @@ Branch = 1
 IfShowModule = {TRUE, FALSE}
 [DisabledMessages]
 version = Verdi_T-2022.06-SP2-1
+50397273 = disabled
 [Editor]
 editorName = TurboEditor
 [Emacs]
@@ -224,7 +225,7 @@ Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
 [FileBrowser]
-nWaveRestoreRCDirHistory = "\"/data/chenzh/course/digital_design/risc-v/sim/signal.rc\""
+nWaveRestoreRCDirHistory = "\"/data/chenzh/course/digital_design/risc-v/sim/signal.rc\"" "\"/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc\"" "\"/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc\""
 [Form]
 version = Verdi_T-2022.06-SP2-1
 [General]
@@ -378,10 +379,13 @@ savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
 tipViewerDlg = 751,366,398,259
+unknownSave_SaveSignal(s)NotFound = 654,376,590,340
+unknownSave = 719,423,461,245
 QwWarnMsgDlg = 650,370,600,250
-restoreSigDlg = 1184,486,551,438
-saveSigDlg = 1184,512,551,386
+saveSigDlg = 674,352,551,386
+restoreSigDlg = 674,326,551,438
 QwUserAskDlg = 798,487,324,134
+FileWithNoteForm_base = 622,274,655,543
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -579,7 +583,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = 500 180 1920 977 45
+viewport = -10 20 1920 977 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -670,33 +674,33 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Severity
-width = 60
-visualIndex = 1
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Time
 width = 60
 visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Code
 width = 60
 visualIndex = 2
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Severity
+width = 60
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -947,8 +951,10 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal.rc\""
+RecentFile1 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc\""
 RecentFile2 = "\"/data/chenzh/course/digital_design/risc-v/sim/*.fsdb\""
+RecentFile3 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc\""
+RecentFile4 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal.rc\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER12 -c ID_CYAN5
 value_window_font = -f COURIER12 -c ID_CYAN5

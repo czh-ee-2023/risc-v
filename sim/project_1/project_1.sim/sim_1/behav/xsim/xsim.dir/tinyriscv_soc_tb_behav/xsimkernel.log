@@ -2,3 +2,6 @@ Running: xsim.dir/tinyriscv_soc_tb_behav/xsimk -simmode gui -wdb tinyriscv_soc_t
 Design successfully loaded
 Design Loading Memory Usage: 35472 KB (Peak: 35472 KB)
 Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 121716 KB (Peak: 174740 KB)
+Simulation CPU Usage: 60 ms

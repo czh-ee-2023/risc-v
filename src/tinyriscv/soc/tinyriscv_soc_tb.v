@@ -2,6 +2,7 @@
 
 //`include "../core/defines.v"
 `include "../src/tinyriscv/core/defines.v"
+`include "../src/tinyriscv/soc/defines_tb.v"
 
 // select one option only
 `define TEST_PROG  1
@@ -489,7 +490,7 @@ module tinyriscv_soc_tb;
 
     // sim timeout
     initial begin
-        #5000
+        #100000
         $display("Time Out."); 
         $finish;
     end
@@ -498,9 +499,12 @@ module tinyriscv_soc_tb;
     initial begin
         //$readmemh ("../../../../sid.data", tinyriscv_soc_top_0.u_rom._rom);
         //$readmemh ("./sID_inst.data", tinyriscv_soc_top_0.u_rom._rom);
-        $fsdbDumpfile("*.fsdb");$fsdbDumpvars(0);
-        //$readmemh ("/data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/sID_inst.data", tinyriscv_soc_top_0.u_rom._rom);
-        $readmemh ("../src/test_inst/sID_inst.data", tinyriscv_soc_top_0.u_rom._rom);
+        $fsdbDumpfile("*.fsdb");
+        $fsdbDumpvars(0);
+        $fsdbDumpvars(0, tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs); // to dump data in regs
+        $readmemh (`sID_inst_file, tinyriscv_soc_top_0.u_rom._rom);
+        //$readmemh (`Temp_inst_file, tinyriscv_soc_top_0.u_rom._rom);
+        //$readmemh (`IF_inst_file, tinyriscv_soc_top_0.u_rom._rom);
     end
 
     // generate wave file, used by gtkwave

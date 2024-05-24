@@ -24,6 +24,7 @@
 /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/spi.v
 /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/timer.v
 /data/chenzh/course/digital_design/risc-v/src/tinyriscv/perips/uart.v
+/data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/defines_tb.v
 /data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_tb.v
 /data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_top.v
 /data/chenzh/course/digital_design/risc-v/src/tinyriscv/utils/full_handshake_rx.v

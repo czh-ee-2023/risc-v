@@ -194,3 +194,4 @@
 `define I2C_ADDR    32'h7000_0000
 
 // 
+`define UART_TX_ADDR    32'h3000_000c

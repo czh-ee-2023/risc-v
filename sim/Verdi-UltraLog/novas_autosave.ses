@@ -26,15 +26,15 @@ fdb_campaign =
 fdb_tool = 
 [hb]
 postSimFile = /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
-syncTime = 290000
-viewport = 500 180 1920 977 0 0 230 898
-activeNode = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id"
-activeScope = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id"
-activeFile = "../src/tinyriscv/core/if_id.v"
+syncTime = 1270000
+viewport = 0 20 1920 977 0 0 230 898
+activeNode = "tinyriscv_soc_tb"
+activeScope = "tinyriscv_soc_tb"
+activeFile = "../src/tinyriscv/soc/tinyriscv_soc_tb.v"
 interactiveMode = False
 viewType = Source
 simulatorMode = False
-sourceBeginLine = 20
+sourceBeginLine = 12
 baMode = False
 srcLineNum = True
 AutoWrap = True
@@ -51,19 +51,17 @@ DnDtraceCrossHierOnly = True
 leadingZero = False
 signalPane = False
 SourceVerticalScrollLines = 5
-Scope1 = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id"
-Scope2 = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_id"
-Scope3 = "tinyriscv_soc_tb"
-multipleSelection = 1 25 14 0 0
+Scope1 = "tinyriscv_soc_tb"
+multipleSelection = 1 12 2 0 0
 sdfCheckUndef = FALSE
 simFlow = FALSE
 [hb.design]
 importCmd = "-f" "filelist.f" "-l" "verdi.log" 
 invokeDir = /data/chenzh/course/digital_design/risc-v/sim
 [hb.sourceTab.1]
-scope = tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id
-File = /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/if_id.v
-Line = 21
+scope = tinyriscv_soc_tb
+File = /data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_tb.v
+Line = 13
 [nMemoryManager]
 WaveformFile = /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
 UserActionNum = 0

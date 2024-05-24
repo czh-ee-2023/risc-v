@@ -1,0 +1,2 @@
+tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs[0:31]
+tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs[0:31]
