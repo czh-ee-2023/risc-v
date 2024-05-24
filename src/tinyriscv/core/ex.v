@@ -51,8 +51,9 @@ module ex(
     // from sid
     input sid_ready_i,                      // sID模块运算结束标志
     input sid_busy_i,                       // sID模块运算忙标志
-    input [`MemBus] sid_result_i,                     // sID模块运算结果
+    input [`MemBus] sid_mem_wdata_i,                     // sID模块运算结果
     input [`MemAddrBus] sid_mem_waddr_i,    // sID模块写内存地址
+    input sid_mem_we_i,
     
     // to mem
     output wire[`MemBus] mem_wdata_o,        // 写内存数据
@@ -172,7 +173,7 @@ module ex(
 
     // 响应中断时不写内存
     //assign mem_we_o = (int_assert_i == `INT_ASSERT)? `WriteDisable: mem_we;
-    assign mem_we_o = (int_assert_i == `INT_ASSERT)? `WriteDisable:(sid_busy_i == `True)? `WriteEnable: mem_we;
+    assign mem_we_o = (int_assert_i == `INT_ASSERT)? `WriteDisable:(sid_busy_i == sid_mem_we_i)? `WriteEnable: mem_we;
     // 响应中断时不向总线请求访问内存
     //assign mem_req_o = (int_assert_i == `INT_ASSERT)? `RIB_NREQ: mem_req;
     assign mem_req_o = (int_assert_i == `INT_ASSERT)? `RIB_NREQ: (sid_busy_i == `True)? `RIB_REQ: mem_req;
@@ -185,8 +186,8 @@ module ex(
     assign csr_waddr_o = csr_waddr_i;
 
     // sID指令对写数据的影响
-    assign mem_waddr_o = (sid_busy_i == `True)? `UART_TX_ADDR: mem_waddr;
-    assign mem_wdata_o = (sid_busy_i == `True)? sid_result_i: mem_wdata;
+    assign mem_waddr_o = (sid_busy_i == `True)? sid_mem_waddr_i: mem_waddr;
+    assign mem_wdata_o = (sid_busy_i == `True)? sid_mem_wdata_i: mem_wdata;
 
 
 

@@ -2,25 +2,20 @@ verdiSetActWin -dock widgetDock_<Decl._Tree>
 debImport "-f" "filelist.f" "-l" "verdi.log"
 debLoadSimResult /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
 wvCreateWindow
-wvSetCursor -win $_nWave2 228667.861410
+wvSetCursor -win $_nWave2 44798387.096774
 verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
 verdiSetActWin -win $_nWave2
 wvRestoreSignal -win $_nWave2 \
-           "/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc" \
+           "/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc" \
            -overWriteAutoAlias on -appendSignals on
 wvZoomOut -win $_nWave2
-wvZoomIn -win $_nWave2
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
 wvZoomOut -win $_nWave2
 wvZoomOut -win $_nWave2
 wvZoomOut -win $_nWave2
@@ -34,10 +29,11 @@ wvZoomIn -win $_nWave2
 wvZoomIn -win $_nWave2
 wvZoomOut -win $_nWave2
 wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 76388888.888889 -snap {("uart" 4)}
+wvSetCursor -win $_nWave2 69892473.118280 -snap {("uart" 4)}
+wvSetCursor -win $_nWave2 78517025.089606 -snap {("uart" 4)}
 wvZoomOut -win $_nWave2
-wvZoomOut -win $_nWave2
-wvZoomOut -win $_nWave2
-wvZoomOut -win $_nWave2
-wvZoomOut -win $_nWave2
-wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
 debExit

@@ -380,10 +380,10 @@ savePropDtl = TRUE
 [QtDialog]
 tipViewerDlg = 751,366,398,259
 unknownSave_SaveSignal(s)NotFound = 654,376,590,340
-unknownSave = 719,423,461,245
-saveSigDlg = 674,352,551,386
 QwWarnMsgDlg = 650,370,600,250
+unknownSave = 1229,584,461,245
 FileWithNoteForm_base = 622,274,655,543
+saveSigDlg = 674,352,551,386
 restoreSigDlg = 674,326,551,438
 QwUserAskDlg = 798,487,324,134
 [Relationship]
@@ -669,7 +669,7 @@ viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Ones
 [VIA.oneSearch.preference]
 DefaultDisplayTimeUnit = "1.000000ns"
 DefaultLogTimeUnit = "1.000000ns"
-isOneSearchVisible = TRUE
+isOneSearchVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC]
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
@@ -680,28 +680,28 @@ visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = Time
-width = 60
-visualIndex = 0
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Time
+width = 60
+visualIndex = 0
+isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
 ViFont = "Clean 14"
@@ -951,9 +951,9 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc\""
+RecentFile1 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc\""
 RecentFile2 = "\"/data/chenzh/course/digital_design/risc-v/sim/*.fsdb\""
-RecentFile3 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc\""
+RecentFile3 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc\""
 RecentFile4 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal.rc\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER12 -c ID_CYAN5

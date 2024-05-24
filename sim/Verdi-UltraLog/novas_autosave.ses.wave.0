@@ -16,16 +16,27 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 10100000.000000
-cursor 0.000000
+zoom 0.000000 187500000.000000
+cursor 79690000.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 24
+top 12
 ; marker line index
-markerPos 31
+markerPos 22
+
+; rename signal list
+; addRenameSig new_name org_name
+activeDirFile "" "/data/chenzh/course/digital_design/risc-v/sim/*.fsdb"
+
+addRenameSig "/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_regs/x30[31:0]" "/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_regs/regs[30][31:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_regs/x31[31:0]" "/tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_regs/regs[31][31:0]"
 
 ; event list
 ; addEvent event_name event_expression
@@ -45,51 +56,56 @@ COMPLEX_EVENT_END
 curSTATUS ByChange
 
 
-addGroup "tb"
+addGroup "reg"
 activeDirFile "" "/data/chenzh/course/digital_design/risc-v/sim/*.fsdb"
-addSignal -h 15 /tinyriscv_soc_tb/clk
 addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_pc_reg/pc_o[31:0]
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/x3[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope x26[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope x27[31:0]
-addGroup "sid"
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/cnt_cycle[3:0]
-addSignal -h 15 -holdScope start_i
-addSignal -h 15 -holdScope ready_o
-addSignal -h 15 -holdScope busy_o
-addSignal -h 15 -UNSIGNED -ASC -holdScope result_o[31:0]
-addGroup "if"
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_if_id/inst_i[31:0]
-addGroup "id"
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_id/inst_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_regs/x30[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x31[31:0]
 addGroup "ex"
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/inst_i[31:0]
-addSignal -h 15 -holdScope sid_start_o
-addSignal -h 15 -holdScope hold_flag_o
-addSignal -h 15 -UNSIGNED -HEX -holdScope mem_waddr_o[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope mem_wdata_o[31:0]
-addSignal -h 15 -holdScope mem_we_o
+addSignal -h 15 /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_ex/mem_we_o
 addSignal -h 15 -holdScope mem_req_o
+addSignal -h 15 -UNSIGNED -HEX -holdScope mem_waddr_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope inst_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope mem_wdata_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope mem_waddr[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope mem_wdata[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg1_rdata_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope reg2_rdata_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope inst_i[31:20]
 addGroup "uart"
-addSignal -h 15 /tinyriscv_soc_tb/tinyriscv_soc_top_0/uart_0/we_i
-addSignal -h 15 -UNSIGNED -HEX -holdScope addr_i[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope data_i[31:0]
+addSignal -h 15 /tinyriscv_soc_tb/tinyriscv_soc_top_0/uart_0/tx_pin
+addSignal -h 15 -holdScope tx_reg
 addSignal -h 15 -UNSIGNED -HEX -holdScope data_o[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope state[3:0]
-addSignal -h 15 -holdScope tx_pin
+addSignal -h 15 -UNSIGNED -HEX -holdScope bit_cnt[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope cycle_cnt[15:0]
+addSignal -h 15 -holdScope tx_data_valid
+addSignal -h 15 -UNSIGNED -HEX -holdScope bit_cnt[3:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope tx_data[7:0]
-addGroup "rib"
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_rib/m0_addr_i[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope m0_data_i[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope m0_data_o[31:0]
-addSignal -h 15 -holdScope m0_req_i
-addSignal -h 15 -holdScope m0_we_i
-addSignal -h 15 -holdScope s3_we_o
-addSignal -h 15 -UNSIGNED -HEX -holdScope s3_data_i[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope s3_data_o[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope s3_addr_o[31:0]
-addGroup "G8"
+addGroup "G4"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
 
+
+FILTER_SIGNAL_BEGIN
+
+"*"
+
+FILTER_STRING_LIST_BEGIN
+FILTER_STRING_LIST_END
+
+FILTER_TYPE_LIST_BEGIN
+"All"
+"Input"
+"Output"
+"Inout"
+"Net"
+"Register"
+"Buffer"
+"Linkage"
+"ClassTransaction"
+"Property"
+"Others"
+FILTER_TYPE_LIST_END
+
+FILTER_SIGNAL_END

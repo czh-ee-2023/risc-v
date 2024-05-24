@@ -117,7 +117,8 @@ module uart(
                         end
                     end
                 endcase
-            end else begin
+            end 
+            else begin
                 tx_data_valid <= 1'b0;
                 if (tx_data_ready == 1'b1) begin
                     uart_status[0] <= 1'b0;

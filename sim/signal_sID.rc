@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 2500000.000000
-cursor 0.000000
+zoom 0.000000 1515000000.000000
+cursor 1409470000.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 22
+top 21
 ; marker line index
-markerPos 31
+markerPos 35
 
 ; event list
 ; addEvent event_name event_expression
@@ -53,11 +53,11 @@ addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/x3[31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope x26[31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope x27[31:0]
 addGroup "sid"
-addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/cnt_cycle[3:0]
-addSignal -h 15 -holdScope start_i
+addSignal -h 15 /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_sid/start_i
 addSignal -h 15 -holdScope ready_o
 addSignal -h 15 -holdScope busy_o
-addSignal -h 15 -UNSIGNED -ASC -holdScope result_o[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope byte_cnt[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope cycle_cnt[31:0]
 addGroup "if"
 addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_tinyriscv/u_if_id/inst_i[31:0]
 addGroup "id"
@@ -78,6 +78,10 @@ addSignal -h 15 -UNSIGNED -HEX -holdScope data_o[31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope state[3:0]
 addSignal -h 15 -holdScope tx_pin
 addSignal -h 15 -UNSIGNED -HEX -holdScope tx_data[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope uart_ctrl[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope uart_status[31:0]
+addSignal -h 15 -holdScope tx_data_valid
+addSignal -h 15 -holdScope tx_data_ready
 addGroup "rib"
 addSignal -h 15 -UNSIGNED -HEX /tinyriscv_soc_tb/tinyriscv_soc_top_0/u_rib/m0_addr_i[31:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope m0_data_i[31:0]
