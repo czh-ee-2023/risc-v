@@ -1,0 +1,197 @@
+Command: vcs +v2k -timescale=1ns/1ps -full64 -R -debug_access+all -f filelist.f +mindelays \
+-negdelay +neg_tchk -l vcs.log
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+      Version T-2022.06-SP2-1_Full64 -- Fri May 24 10:47:50 2024
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../src/tinyriscv/core/clint.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/clint.v'.
+Parsing design file '../src/tinyriscv/core/csr_reg.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/csr_reg.v'.
+Parsing design file '../src/tinyriscv/core/ctrl.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/ctrl.v'.
+Parsing design file '../src/tinyriscv/core/defines.v'
+Parsing design file '../src/tinyriscv/core/div.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/div.v'.
+Parsing design file '../src/tinyriscv/core/ex.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/ex.v'.
+Parsing design file '../src/tinyriscv/core/id_ex.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/id_ex.v'.
+Parsing design file '../src/tinyriscv/core/id.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/id.v'.
+Parsing design file '../src/tinyriscv/core/if_id.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/if_id.v'.
+Parsing design file '../src/tinyriscv/core/pc_reg.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/pc_reg.v'.
+Parsing design file '../src/tinyriscv/core/regs.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/regs.v'.
+Parsing design file '../src/tinyriscv/core/rib.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/rib.v'.
+Parsing design file '../src/tinyriscv/core/sid.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/sid.v'.
+Parsing design file '../src/tinyriscv/core/tinyriscv.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/core/tinyriscv.v'.
+Parsing design file '../src/tinyriscv/debug/uart_debug.v'
+Parsing design file '../src/tinyriscv/debug/jtag_top.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/debug/jtag_top.v'.
+Parsing design file '../src/tinyriscv/debug/jtag_driver.v'
+Parsing design file '../src/tinyriscv/debug/jtag_dm.v'
+Parsing design file '../src/tinyriscv/perips/uart.v'
+Parsing design file '../src/tinyriscv/perips/timer.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/perips/timer.v'.
+Parsing design file '../src/tinyriscv/perips/spi.v'
+Parsing design file '../src/tinyriscv/perips/rom.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/perips/rom.v'.
+Parsing design file '../src/tinyriscv/perips/ram.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/perips/ram.v'.
+Parsing design file '../src/tinyriscv/perips/gpio.v'
+Parsing design file '../src/tinyriscv/perips/pwm.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/perips/pwm.v'.
+Parsing design file '../src/tinyriscv/perips/i2c.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/perips/i2c.v'.
+Parsing design file '../src/tinyriscv/soc/tinyriscv_soc_top.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/soc/tinyriscv_soc_top.v'.
+Parsing design file '../src/tinyriscv/soc/tinyriscv_soc_tb.v'
+Parsing included file '../src/tinyriscv/core/defines.v'.
+Back to file '../src/tinyriscv/soc/tinyriscv_soc_tb.v'.
+Parsing design file '../src/tinyriscv/utils/gen_dff.v'
+Parsing design file '../src/tinyriscv/utils/gen_buf.v'
+Parsing design file '../src/tinyriscv/utils/full_handshake_tx.v'
+Parsing design file '../src/tinyriscv/utils/full_handshake_rx.v'
+Top Level Modules:
+       tinyriscv_soc_tb
+       gen_rst_1_dff
+       gen_rst_def_dff
+       gen_en_dff
+       gen_ticks_sync
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+../src/tinyriscv/soc/tinyriscv_soc_tb.v, 512
+tinyriscv_soc_tb, "tinyriscv_soc_top tinyriscv_soc_top_0( .clk (clk),  .rst (rst),  .uart_debug_pin (1'b0));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../src/tinyriscv/core/tinyriscv.v, 390
+"sid u_sid( .clk (clk),  .rst (rst),  .start_i (ex_sid_start_o),  .ready_o (sid_ready_o),  .busy_o (sid_busy_o),  .result_o (sid_result_o),  .mem_waddr_o (sid_waddr_o));"
+  The following 1-bit expression is connected to 32-bit port "mem_waddr_o" of 
+  module "sid", instance "u_sid".
+  Expression: sid_waddr_o
+  Instantiated module defined at: "../src/tinyriscv/core/sid.v", 7
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../src/tinyriscv/soc/tinyriscv_soc_top.v, 282
+"gpio gpio_0( .clk (clk),  .rst (rst),  .we_i (s4_we_o),  .addr_i (s4_addr_o),  .data_i (s4_data_o),  .data_o (s4_data_i),  .io_pin_i (io_in),  .reg_ctrl (gpio_ctrl),  .reg_data (gpio_data));"
+  The following 16-bit expression is connected to 2-bit port "io_pin_i" of 
+  module "gpio", instance "gpio_0".
+  Expression: io_in
+  Instantiated module defined at: "../src/tinyriscv/perips/gpio.v", 19
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../src/tinyriscv/soc/tinyriscv_soc_top.v, 317
+"i2c i2c_0( .clk (clk),  .rst (rst),  .we_i (s7_we_o),  .addr_i (s7_addr_o),  .data_i (s7_data_o),  .data_o (s7_data_i),  .sda (sda),  .scl (scl));"
+  The following 32-bit expression is connected to 8-bit port "data_o" of 
+  module "i2c", instance "i2c_0".
+  Expression: s7_data_i
+  Instantiated module defined at: "../src/tinyriscv/perips/i2c.v", 5
+  Use +lint=PCWM for more details.
+
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+18 modules and 0 UDP read.
+recompiling module clint
+recompiling module div
+recompiling module rib
+recompiling module uart_debug
+recompiling module jtag_top
+recompiling module uart
+recompiling module timer
+recompiling module spi
+recompiling module gpio
+recompiling module pwm
+recompiling module i2c
+recompiling module tinyriscv_soc_tb
+recompiling module gen_rst_1_dff
+recompiling module gen_rst_def_dff
+recompiling module gen_en_dff
+recompiling module gen_ticks_sync
+recompiling module full_handshake_tx
+recompiling module full_handshake_rx
+All of 18 modules done
+make[1]: Entering directory `/data/chenzh/course/digital_design/risc-v/sim/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib -L/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _15226_archive_1.so \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/vcs_save_restore_new.o /tools/Synopsys/verdi/T-2022.06-SP2-1/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/data/chenzh/course/digital_design/risc-v/sim/csrc'
+Command: /data/chenzh/course/digital_design/risc-v/sim/./simv +v2k +mindelays +neg_tchk -a vcs.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2-1_Full64; Runtime version T-2022.06-SP2-1_Full64;  May 24 10:47 2024
+test running...
+*Verdi* Loading libsscore_vcs202206.so
+FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-1, Linux x86_64/64bit, 01/12/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file '*.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+Time Out.
+$finish called from file "../src/tinyriscv/soc/tinyriscv_soc_tb.v", line 494.
+$finish at simulation time              5000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 5000000 ps
+CPU Time:      0.230 seconds;       Data structure size:   0.1Mb
+Fri May 24 10:47:52 2024
+CPU time: .623 seconds to compile + .242 seconds to elab + .186 seconds to link + .263 seconds in simulation

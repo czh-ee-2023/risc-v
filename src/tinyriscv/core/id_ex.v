@@ -14,7 +14,8 @@
  limitations under the License.                                          
  */
 
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 // 将译码结果向执行模块传递
 module id_ex(

@@ -13,8 +13,8 @@
  See the License for the specific language governing permissions and     
  limitations under the License.                                          
  */
-
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 // 译码模块
 // 纯组合逻辑电路

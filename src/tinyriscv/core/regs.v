@@ -14,7 +14,9 @@
  limitations under the License.                                          
  */
 
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
+
 
 // 通用寄存器模块
 module regs(

@@ -1,0 +1,116 @@
+{
+    "clint": [
+        "clint",
+        "qW9kS",
+        "module",
+        1
+    ],
+    "div": [
+        "div",
+        "rzVRz",
+        "module",
+        2
+    ],
+    "rib": [
+        "rib",
+        "Duk6f",
+        "module",
+        3
+    ],
+    "uart_debug": [
+        "uart_debug",
+        "ggzKQ",
+        "module",
+        4
+    ],
+    "jtag_top": [
+        "jtag_top",
+        "vTyec",
+        "module",
+        5
+    ],
+    "uart": [
+        "uart",
+        "bvImI",
+        "module",
+        6
+    ],
+    "timer": [
+        "timer",
+        "t5sdY",
+        "module",
+        7
+    ],
+    "spi": [
+        "spi",
+        "jdG3K",
+        "module",
+        8
+    ],
+    "gpio": [
+        "gpio",
+        "NhjRS",
+        "module",
+        9
+    ],
+    "pwm": [
+        "pwm",
+        "SrK1z",
+        "module",
+        10
+    ],
+    "i2c": [
+        "i2c",
+        "FPmmx",
+        "module",
+        11
+    ],
+    "tinyriscv_soc_tb": [
+        "tinyriscv_soc_tb",
+        "AJ0A6",
+        "module",
+        12
+    ],
+    "gen_rst_1_dff": [
+        "gen_rst_1_dff",
+        "WBbf5",
+        "module",
+        13
+    ],
+    "gen_rst_def_dff": [
+        "gen_rst_def_dff",
+        "vehQv",
+        "module",
+        14
+    ],
+    "gen_en_dff": [
+        "gen_en_dff",
+        "DIPR0",
+        "module",
+        15
+    ],
+    "gen_ticks_sync": [
+        "gen_ticks_sync",
+        "gRPVn",
+        "module",
+        16
+    ],
+    "full_handshake_tx": [
+        "full_handshake_tx",
+        "HD5gB",
+        "module",
+        17
+    ],
+    "full_handshake_rx": [
+        "full_handshake_rx",
+        "aLYw7",
+        "module",
+        18
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        19
+    ]
+}

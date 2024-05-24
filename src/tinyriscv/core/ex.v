@@ -13,8 +13,8 @@
  See the License for the specific language governing permissions and     
  limitations under the License.                                          
  */
-
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 // 执行模块
 // 纯组合逻辑电路
@@ -264,12 +264,11 @@ module ex(
     always @(*)begin
         if(opcode == `INST_TYPE_N && funct3 == `INST_SID)begin
             sid_start = (sid_ready_i)&(~sid_busy_i);
-            sid_hold_flag = sid_busy_i;
         end
         else begin
             sid_start = `sIDStop;
-            sid_hold_flag = `HoldDisable;
         end
+        sid_hold_flag = sid_busy_i;
     end
     
     // 执行正常指令

@@ -1,0 +1,185 @@
+0
+38
++itf+/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/vcsdp_lite.tab
++mindelays
++neg_tchk
++v2k
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/tools/Synopsys/vcs/T-2022.06-SP2-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libvirsim.so /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/liberrorinf.so /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libsnpsmalloc.so /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/tools/Synopsys/verdi/T-2022.06-SP2-1/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/tools/Synopsys/vcs/T-2022.06-SP2-1/include
+-Mxllcflags=
+-P
+-Xvcs_run_simv=1
+-debug_access+all
+-f filelist.f
+-fsdb
+-full64
+-gen_obj
+-l
+-negdelay
+-picarchive
+-timescale=1ns/1ps
+/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/bin/vcs1
+vcs.log
+/tools/Synopsys/verdi/T-2022.06-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
+filelist.f
+99
+jEdit_HOME=/tools/jEdit/5.5.0
+XMODIFIERS=@im=ibus
+XDG_SESSION_ID=191641
+XDG_RUNTIME_DIR=/run/user/1033
+VMR_MODE_FLAG=64
+VIRSIMHOME=/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/virsim
+VERDI_HOME=/tools/Synopsys/verdi/T-2022.06-SP2-1
+VERA_HOME=/tools/Synopsys/vera/D-2009.12/vera_vD-2009.12_amd64
+VENDOR=unknown
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=vcs.log
+VCS_HOME=/tools/Synopsys/vcs/T-2022.06-SP2-1
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_CC=gcc
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+ULTRASIM_HOME=/tools/Cadence/ULTRASIM181
+TOOL_HOME=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64
+TIX_LIBRARY=/tools/Cadence/EDI14/tools.lnx86/lib/tix8.1
+TCLLIBPATH=/tools/Cadence/EDI14/BuildGates/version/lib/tools/tcl_packages
+Sentaurus_HOME=/tools/Synopsys/sentaurus/Q_2019.12-SP1a
+SYNOPSYS_TMAX=/tools/Synopsys/testmax/T-2022.03-SP2
+SYNOPSYS_SOLD=/tools/Synopsys/sold/Z-2007.03
+SYNOPSYS_LC_ROOT=/tools/Synopsys/lc/U-2022.12-SP1/
+SYNOPSYS_ICC=/tools/Synopsys/icc/T-2022.03-SP2
+SYNOPSYS_ICC2=/tools/Synopsys/icc2/U-2022.12-SP1
+SYNOPSYS_HOME=/tools/Synopsys
+SYNOPSYS_ASTRO=/tools/Synopsys/astro/Z-2007.03-SP3
+SYNOPSYS=/tools/Synopsys/syn/T-2022.03-SP2
+SSH_TTY=/dev/pts/24
+SSH_CONNECTION=10.10.10.100 42164 10.10.10.102 22
+SSH_CLIENT=10.10.10.100 42164 22
+SPYGLASS_HOME=/tools/Synopsys/spyglass/T-2022.06-SP2/SPYGLASS_HOME/
+SPW_SYS_DB=/tools/Cadence/spw481
+SPW_HOME=/tools/Cadence/spw481
+SOCE_INSTALL_PATH=/tools/Cadence/EDI14
+SNPS_VCS_CLANG_PATH=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SNPS_ARCH=linux
+SIM_ARCH=linux
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+REMOTEHOST=design
+QUANTUS_HOME=/tools/Cadence/QUANTUS212
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PRIMETIME_HOME=/tools/Synopsys/prime/T-2022.03-SP2
+PLATO_HOME=/tools/Cadence/EDI14/tools/plato
+OVA_UUM=0
+OS_LDFLAGS=
+OSTYPE=linux
+NCX_HOME=/tools/Synopsys/ncx/F-2011.12/ncx
+MilkyWay_HOME=/tools/Synopsys/mw/T-2022.03-SP2/
+MVTOOLS_HOME=/tools/Synopsys/mvtools/vG-2012.09
+MMSIM_HOME=/tools/Cadence/SPECTRE211
+MGC_HOME=/tools/Mentor/Calibre/aoj_cal_2023.1_18.8
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LTRAN_ROOT=/tools/Synopsys/syn/T-2022.03-SP2/linux64/syn/ltran
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LD_ASSUME_KERNEL=
+LDV_HOME=/tools/Cadence/INCISIVE152
+LC_PATH=/tools/Synopsys/lc/U-2022.12-SP1/
+LC_ALL=C
+LBS_CLUSTER_MASTER=cad5
+KDEDIRS=/usr
+IUS_HOME=/tools/Cadence/INCISIVE152
+INNOVUS_HOME=/tools/Cadence/INNOVUS191
+IC_HOME=/tools/Cadence/IC618
+HSPICE_HOME_DIR=/tools/Synopsys/hspice/B-2008.09
+HSIM_HOME_DIR=/tools/Synopsys/hsim/F-2011.09-SP2
+HOSTTYPE=x86_64-linux
+HERCULES_HOME_DIR=/tools/Synopsys/hercules/Y-2006.12-SP1
+GROUP=nics4304
+EXT_HOME=/tools/Cadence/EXT161
+ENCOUNTER=/tools/Cadence/EDI14
+EMX_HOME=/tools/Cadence/EMX20231
+DVE=/tools/Synopsys/vcs/T-2022.06-SP2-1/gui/dve
+DRACHELP4=/tools/Cadence/IC618/tools/dracula/etc/drac_help
+CTOS_HOME=/tools/Cadence/ctos141
+CORETOOLS_HOME=/tools/Synopsys/coretools/D-2010.03
+CONFORMALHOME=/tools/Cadence/conformal71
+CDS_TEXT_EDITOR=gedit
+CDS_Netlisting_Mode=Analog
+CDSHOME=/tools/Cadence/IC618
+ASSURAHOME=/tools/Cadence/ASSURA41
+ARCHPRO_ROOT=/tools/Synopsys/mvtools/vG-2012.09
+ARCH=linux
+0
+0
+35
+1716352846 ../src/tinyriscv/utils/full_handshake_rx.v
+1716352846 ../src/tinyriscv/utils/full_handshake_tx.v
+1716352846 ../src/tinyriscv/utils/gen_buf.v
+1716352846 ../src/tinyriscv/utils/gen_dff.v
+1716518861 ../src/tinyriscv/soc/tinyriscv_soc_tb.v
+1716515417 ../src/tinyriscv/soc/tinyriscv_soc_top.v
+1716515358 ../src/tinyriscv/perips/i2c.v
+1716515365 ../src/tinyriscv/perips/pwm.v
+1716352846 ../src/tinyriscv/perips/gpio.v
+1716515370 ../src/tinyriscv/perips/ram.v
+1716515392 ../src/tinyriscv/perips/rom.v
+1716352846 ../src/tinyriscv/perips/spi.v
+1716515400 ../src/tinyriscv/perips/timer.v
+1716352846 ../src/tinyriscv/perips/uart.v
+1716352846 ../src/tinyriscv/debug/jtag_dm.v
+1716352846 ../src/tinyriscv/debug/jtag_driver.v
+1716515346 ../src/tinyriscv/debug/jtag_top.v
+1716379651 ../src/tinyriscv/debug/uart_debug.v
+1716515315 ../src/tinyriscv/core/tinyriscv.v
+1716518506 ../src/tinyriscv/core/sid.v
+1716515304 ../src/tinyriscv/core/rib.v
+1716515298 ../src/tinyriscv/core/regs.v
+1716515293 ../src/tinyriscv/core/pc_reg.v
+1716515286 ../src/tinyriscv/core/if_id.v
+1716515281 ../src/tinyriscv/core/id.v
+1716515272 ../src/tinyriscv/core/id_ex.v
+1716517547 ../src/tinyriscv/core/ex.v
+1716515255 ../src/tinyriscv/core/div.v
+1716467000 ../src/tinyriscv/core/defines.v
+1716515245 ../src/tinyriscv/core/ctrl.v
+1716515239 ../src/tinyriscv/core/csr_reg.v
+1716515195 ../src/tinyriscv/core/clint.v
+1716514727 filelist.f
+1673520352 /tools/Synopsys/verdi/T-2022.06-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
+1674705950 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/vcsdp_lite.tab
+4
+1674707991 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libvirsim.so
+1674707009 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/liberrorinf.so
+1674706922 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libsnpsmalloc.so
+1674707006 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libvfs.so
+1716518872 simv.daidir
+-1 partitionlib

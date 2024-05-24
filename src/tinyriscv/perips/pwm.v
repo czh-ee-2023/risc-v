@@ -1,5 +1,6 @@
 // PWM module
-`include "../core/defines.v"
+//`include "../core/defines.v"
+`include "../src/tinyriscv/core/defines.v"
 module pwm (
     input wire clk,
     input wire rst,

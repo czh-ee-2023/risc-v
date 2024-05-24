@@ -14,7 +14,8 @@
  limitations under the License.                                          
  */
 
-`include "../core/defines.v"
+//`include "../core/defines.v"
+`include "../src/tinyriscv/core/defines.v"
 
 // tinyriscv soc\u9876\u5c42\u6a21\u5757
 module tinyriscv_soc_top(

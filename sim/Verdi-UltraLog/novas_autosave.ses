@@ -1,0 +1,96 @@
+@Verdi-Ultra rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_T-2022.06-SP2-1
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = 
+[hb]
+postSimFile = /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
+syncTime = 290000
+viewport = 500 180 1920 977 0 0 230 898
+activeNode = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id"
+activeScope = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id"
+activeFile = "../src/tinyriscv/core/if_id.v"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 20
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+safetyAwareAnnot = True
+amsAnnot = True
+DnDtraceCrossHierOnly = True
+leadingZero = False
+signalPane = False
+SourceVerticalScrollLines = 5
+Scope1 = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id"
+Scope2 = "tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_id"
+Scope3 = "tinyriscv_soc_tb"
+multipleSelection = 1 25 14 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-f" "filelist.f" "-l" "verdi.log" 
+invokeDir = /data/chenzh/course/digital_design/risc-v/sim
+[hb.sourceTab.1]
+scope = tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_if_id
+File = /data/chenzh/course/digital_design/risc-v/src/tinyriscv/core/if_id.v
+Line = 21
+[nMemoryManager]
+WaveformFile = /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 25 1920 394 155 65
+primaryWindow = TRUE
+SessionFile = /data/chenzh/course/digital_design/risc-v/sim/Verdi-UltraLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE
+fsaRegMask = TRUE
+fsaCoreMask = TRUE
+fsaSfsmMask = TRUE
+fsaEcrMask = TRUE
+tPropMask = TRUE

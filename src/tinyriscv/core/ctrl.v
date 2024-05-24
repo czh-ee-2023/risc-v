@@ -13,8 +13,8 @@
  See the License for the specific language governing permissions and     
  limitations under the License.                                          
  */
-
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 // 控制模块
 // 发出跳转、暂停流水线信号

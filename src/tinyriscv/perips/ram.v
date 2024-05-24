@@ -14,7 +14,8 @@
  limitations under the License.                                          
  */
 
-`include "../core/defines.v"
+//`include "../core/defines.v"
+`include "../src/tinyriscv/core/defines.v"
 
 // ram module
 module ram(

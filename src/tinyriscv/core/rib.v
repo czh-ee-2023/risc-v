@@ -14,7 +14,8 @@
  limitations under the License.                                          
  */
 
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 
 // RIB\u603b\u7ebf\u6a21\u5757

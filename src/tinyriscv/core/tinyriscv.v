@@ -14,7 +14,8 @@
  limitations under the License.                                          
  */
 
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 // tinyriscv处理器核顶层模块
 module tinyriscv(

@@ -1,4 +1,5 @@
-`include "defines.v"
+`include "../src/tinyriscv/core/defines.v"
+//`include "defines.v"
 
 // sID模块
 // 10个周期发送学号
@@ -28,41 +29,54 @@ always@(posedge clk) begin
         busy_o <= `False;
         ready_o <= `sIDResultReady; //
     end
-
-    else if (start_i == `sIDStart) begin
-        busy_o <= `True;
-        if(cnt_cycle < `sIDDepth-1)begin
-            cnt_cycle <= cnt_cycle + 1;
+    // detect start signal from ex
+    else if(ready_o==`sIDResultReady)begin
+        if(start_i == `sIDStart)begin
+            busy_o <= `True;
+            cnt_cycle <= 4'b0001;
             ready_o <= `sIDResultNotReady;
+        end
+        else begin
+            cnt_cycle <= 4'b0000;
+            busy_o <= `False;
+            ready_o <= `sIDResultReady; //
+        end
+    end
+    else begin
+        if(cnt_cycle < `sIDDepth-1)begin
+            ready_o <= `sIDResultNotReady;
+            busy_o <= `True;
+            cnt_cycle <= cnt_cycle + 1; 
+        end
+        else if (cnt_cycle == `sIDDepth-1)begin
+            ready_o <= `sIDResultReady;
+            busy_o <= `True;
+            cnt_cycle <= cnt_cycle + 1;
         end
         else begin 
             cnt_cycle <= 4'b0000;
+            busy_o <= `False;
             ready_o <= `sIDResultReady;
         end
+        end
     end
-
-    else begin
-        cnt_cycle <= 4'b0000;
-        busy_o <= `False;
-        ready_o <= `sIDResultReady; //
-    end
-end
-
+    
 // ASCII码转16进制
 // 2023310655 -> {8'h32, 8'h30, 8'h32, 8'h33, 8'h33, 8'h31, 8'h30, 8'h36, 8'h35, 8'h35}
 
 always@(*) begin    
     case(cnt_cycle)
-        4'd0: result_o = {24'h0, 8'h32};
-        4'd1: result_o = {24'h0, 8'h30};
-        4'd2: result_o = {24'h0, 8'h32};
-        4'd3: result_o = {24'h0, 8'h33};
+        4'd0: result_o = `ZeroWord;
+        4'd1: result_o = {24'h0, 8'h32};
+        4'd2: result_o = {24'h0, 8'h30};
+        4'd3: result_o = {24'h0, 8'h32};
         4'd4: result_o = {24'h0, 8'h33};
-        4'd5: result_o = {24'h0, 8'h31};
-        4'd6: result_o = {24'h0, 8'h30};
-        4'd7: result_o = {24'h0, 8'h36};
-        4'd8: result_o = {24'h0, 8'h35};
+        4'd5: result_o = {24'h0, 8'h33};
+        4'd6: result_o = {24'h0, 8'h31};
+        4'd7: result_o = {24'h0, 8'h30};
+        4'd8: result_o = {24'h0, 8'h36};
         4'd9: result_o = {24'h0, 8'h35};
+        4'd10: result_o = {24'h0, 8'h35};
         default: result_o = `ZeroWord;
     endcase
 end
