@@ -380,12 +380,12 @@ savePropDtl = TRUE
 [QtDialog]
 tipViewerDlg = 751,366,398,259
 unknownSave_SaveSignal(s)NotFound = 654,376,590,340
-QwWarnMsgDlg = 650,370,600,250
 unknownSave = 1229,584,461,245
-FileWithNoteForm_base = 622,274,655,543
 saveSigDlg = 674,352,551,386
+QwWarnMsgDlg = 650,370,600,250
 restoreSigDlg = 674,326,551,438
 QwUserAskDlg = 798,487,324,134
+FileWithNoteForm_base = 622,274,655,543
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -951,9 +951,9 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc\""
+RecentFile1 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc\""
 RecentFile2 = "\"/data/chenzh/course/digital_design/risc-v/sim/*.fsdb\""
-RecentFile3 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_sID.rc\""
+RecentFile3 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal_IF.rc\""
 RecentFile4 = "\"/data/chenzh/course/digital_design/risc-v/sim/signal.rc\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER12 -c ID_CYAN5

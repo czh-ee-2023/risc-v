@@ -22,6 +22,7 @@ module sid(
 );
 
 localparam BAUD_115200 = 32'h1B8; // 115200bps 对应分频系数
+
 reg [3:0] byte_cnt;
 reg [31:0] cycle_cnt;
 
@@ -49,7 +50,8 @@ always@(posedge clk) begin
     else begin
         if(byte_cnt < `sIDDepth)begin
             ready_o <= `sIDResultNotReady;
-            if(cycle_cnt == BAUD_115200<<3+1)begin
+            if(cycle_cnt == (BAUD_115200*10))begin
+            
                 byte_cnt <= byte_cnt + 1;
                 cycle_cnt <= 32'h0;
             end
@@ -59,9 +61,9 @@ always@(posedge clk) begin
             end
         end
         else if (byte_cnt == `sIDDepth)begin
-            if(cycle_cnt == BAUD_115200<<3+1)begin
+            if(cycle_cnt == (BAUD_115200*10))begin
                 ready_o <= `sIDResultReady;
-                byte_cnt <= byte_cnt + 1;
+                byte_cnt <= 32'h0;
                 cycle_cnt <= 32'h0;
             end
             else begin
@@ -101,7 +103,7 @@ end
 
 always@(*)begin
     busy_o = (byte_cnt > 4'd0);
-    if(cycle_cnt <= BAUD_115200<<3)begin
+    if(cycle_cnt <= (BAUD_115200*10))begin
         sid_mem_waddr_o = `UART_TX_ADDR;
         sid_mem_we = `WriteEnable;
     end

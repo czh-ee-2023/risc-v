@@ -121,7 +121,7 @@ ARCH=linux
 1716352846 ../src/tinyriscv/utils/full_handshake_tx.v
 1716352846 ../src/tinyriscv/utils/gen_buf.v
 1716352846 ../src/tinyriscv/utils/gen_dff.v
-1716558601 ../src/tinyriscv/soc/tinyriscv_soc_tb.v
+1716560255 ../src/tinyriscv/soc/tinyriscv_soc_tb.v
 1716515417 ../src/tinyriscv/soc/tinyriscv_soc_top.v
 1716515358 ../src/tinyriscv/perips/i2c.v
 1716515365 ../src/tinyriscv/perips/pwm.v
@@ -136,7 +136,7 @@ ARCH=linux
 1716515346 ../src/tinyriscv/debug/jtag_top.v
 1716379651 ../src/tinyriscv/debug/uart_debug.v
 1716556582 ../src/tinyriscv/core/tinyriscv.v
-1716557924 ../src/tinyriscv/core/sid.v
+1716560158 ../src/tinyriscv/core/sid.v
 1716515304 ../src/tinyriscv/core/rib.v
 1716515298 ../src/tinyriscv/core/regs.v
 1716515293 ../src/tinyriscv/core/pc_reg.v
@@ -157,5 +157,5 @@ ARCH=linux
 1674707009 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/liberrorinf.so
 1674706922 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libsnpsmalloc.so
 1674707006 /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/libvfs.so
-1716558610 simv.daidir
+1716560262 simv.daidir
 -1 partitionlib

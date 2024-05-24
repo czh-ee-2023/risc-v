@@ -2,7 +2,7 @@ Command: vcs +v2k -timescale=1ns/1ps -full64 -R -debug_access+all -f filelist.f 
 -negdelay +neg_tchk -l vcs.log
 *** Using c compiler gcc instead of cc ...
                          Chronologic VCS (TM)
-      Version T-2022.06-SP2-1_Full64 -- Fri May 24 21:50:08 2024
+      Version T-2022.06-SP2-1_Full64 -- Fri May 24 22:17:41 2024
 
                     Copyright (c) 1991 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -160,7 +160,7 @@ rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib -L/tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib \
--Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _7082_archive_1.so \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _35383_archive_1.so \
 SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
 -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /tools/Synopsys/vcs/T-2022.06-SP2-1/linux64/lib/vcs_tls.o \
 -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
@@ -171,7 +171,7 @@ make[1]: Leaving directory `/data/chenzh/course/digital_design/risc-v/sim/csrc'
 Command: /data/chenzh/course/digital_design/risc-v/sim/./simv +v2k +mindelays +neg_tchk -a vcs.log
 Chronologic VCS simulator copyright 1991-2022
 Contains Synopsys proprietary information.
-Compiler version T-2022.06-SP2-1_Full64; Runtime version T-2022.06-SP2-1_Full64;  May 24 21:50 2024
+Compiler version T-2022.06-SP2-1_Full64; Runtime version T-2022.06-SP2-1_Full64;  May 24 22:17 2024
 test running...
 *Verdi* Loading libsscore_vcs202206.so
 FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-1, Linux x86_64/64bit, 01/12/2023
@@ -182,9 +182,9 @@ FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-1, Linux x86_64/64bit, 01/12/20
 *Verdi* : Dumping the signal (tinyriscv_soc_tb.tinyriscv_soc_top_0.u_tinyriscv.u_regs.regs).
 Time Out.
 $finish called from file "../src/tinyriscv/soc/tinyriscv_soc_tb.v", line 495.
-$finish at simulation time           1500000000
+$finish at simulation time           1000000000
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 1500000000 ps
-CPU Time:      0.370 seconds;       Data structure size:   0.1Mb
-Fri May 24 21:50:10 2024
-CPU time: .612 seconds to compile + .237 seconds to elab + .176 seconds to link + .401 seconds in simulation
+Time: 1000000000 ps
+CPU Time:      0.320 seconds;       Data structure size:   0.1Mb
+Fri May 24 22:17:42 2024
+CPU time: .614 seconds to compile + .238 seconds to elab + .178 seconds to link + .352 seconds in simulation
