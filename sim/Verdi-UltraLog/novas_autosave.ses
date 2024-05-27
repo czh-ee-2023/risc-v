@@ -26,7 +26,7 @@ fdb_campaign =
 fdb_tool = 
 [hb]
 postSimFile = /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
-syncTime = 1409470000
+syncTime = 881450000
 viewport = 0 20 1920 977 0 0 230 898
 activeNode = "tinyriscv_soc_tb"
 activeScope = "tinyriscv_soc_tb"
@@ -34,7 +34,7 @@ activeFile = "../src/tinyriscv/soc/tinyriscv_soc_tb.v"
 interactiveMode = False
 viewType = Source
 simulatorMode = False
-sourceBeginLine = 20
+sourceBeginLine = 12
 baMode = False
 srcLineNum = True
 AutoWrap = True
@@ -61,7 +61,7 @@ invokeDir = /data/chenzh/course/digital_design/risc-v/sim
 [hb.sourceTab.1]
 scope = tinyriscv_soc_tb
 File = /data/chenzh/course/digital_design/risc-v/src/tinyriscv/soc/tinyriscv_soc_tb.v
-Line = 21
+Line = 13
 [nMemoryManager]
 WaveformFile = /data/chenzh/course/digital_design/risc-v/sim/*.fsdb
 UserActionNum = 0

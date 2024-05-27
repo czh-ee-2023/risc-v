@@ -383,9 +383,9 @@ unknownSave_SaveSignal(s)NotFound = 654,376,590,340
 unknownSave = 1229,584,461,245
 saveSigDlg = 674,352,551,386
 QwWarnMsgDlg = 650,370,600,250
-restoreSigDlg = 674,326,551,438
-QwUserAskDlg = 798,487,324,134
 FileWithNoteForm_base = 622,274,655,543
+restoreSigDlg = 674,350,551,438
+QwUserAskDlg = 798,487,324,134
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
